@@ -137,7 +137,7 @@ const Hero = () => {
             top: `calc(50% - ${index * 3}px)`,
           }}
         >
-          Motion <span className="relative block left-[90px]">Script</span>
+          Motion <span className="relative block left-[92px]">Script</span>
         </h1>
       ))}
       <h2
