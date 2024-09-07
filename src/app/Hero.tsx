@@ -47,7 +47,6 @@ const Hero = () => {
           {
             opacity: 0,
             duration: particleDuration / 2,
-            delay: index * 0.15,
           },
           "<50%"
         );
