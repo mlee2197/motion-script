@@ -137,7 +137,7 @@ const Hero = () => {
             top: `calc(50% - ${index * 3}px)`,
           }}
         >
-          Motion <span className="block">Script</span>
+          Motion <span className="relative block left-10">Script</span>
         </h1>
       ))}
       <h2 className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 opacity-50 md:hidden">
@@ -146,7 +146,10 @@ const Hero = () => {
       {Array.from({ length: 30 }).map((_, index) => (
         <div
           key={`${index}-particle`}
-          className={clsx("particle", index % 2 === 0 ? "plus" : "box")}
+          className={clsx(
+            "particle",
+            index % 3 === 0 ? "plus" : index % 3 === 1 ? "box" : "circle"
+          )}
         />
       ))}
     </div>
