@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #171717;
     --foreground: #ededed;
   }
 }
@@ -17,11 +17,59 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-geist-sans);
+  }
+
+  h1 {
+    font-family: var(--font-shrikhand);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    scale: 0;
+    width: 32px;
+    height: 32px;
+  }
+  .plus {
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: rgb(222, 224, 218);
+      width: 40%;
+      height: 100%;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%);
+    }
+  }
+  .box {
+    background-color: white;
+  }
+  .circle {
+    background-color: white;
+    border-radius: 50%;
+  }
+  .hero-header {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 origin-[-30%_60%] text-7xl tracking-wide md:text-8xl;
   }
 }
