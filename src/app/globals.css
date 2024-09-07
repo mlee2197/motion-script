@@ -89,6 +89,6 @@ body {
     border-radius: 50%;
   }
   .hero-header {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 origin-[-30%_60%] text-7xl tracking-wide md:text-8xl;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 origin-[-30%_60%] text-7xl tracking-wide md:text-9xl;
   }
 }

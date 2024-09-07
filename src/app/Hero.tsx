@@ -111,7 +111,7 @@ const Hero = () => {
             const xSet = gsap.quickSetter(header, "x", "px");
             const ySet = gsap.quickSetter(header, "y", "px");
             gsap.delayedCall(index * 0.1, () => {
-              xSet(mouse.x - 200);
+              xSet(mouse.x);
               ySet(mouse.y);
             });
           });
