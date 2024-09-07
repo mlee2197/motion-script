@@ -90,8 +90,8 @@ const Hero = () => {
             setInitialAnimation(false);
           },
         });
-        headers.forEach((header, index) => {
-          tl.fromTo(
+        headers.forEach(async (header, index) => {
+          await tl.fromTo(
             header,
             {
               opacity: 0,
@@ -106,7 +106,6 @@ const Hero = () => {
           );
         });
       } else if (!isMobile) {
-        gsap.set(headers, { opacity: 1 });
         gsap.ticker.add(() => {
           headers.forEach((header, index) => {
             const xSet = gsap.quickSetter(header, "x", "px");
@@ -118,6 +117,7 @@ const Hero = () => {
           });
         });
       }
+      gsap.set(headers, { opacity: 1 });
     }, containerRef);
     return () => context.revert();
   }, [mouse, isMobile, initialAnimation]);
@@ -141,7 +141,10 @@ const Hero = () => {
           Motion <span className="relative block left-10">Script</span>
         </h1>
       ))}
-      <h2 className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 opacity-50 md:hidden">
+      <h2
+        className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 text-gray-500 opacity-0 animate-fadeIn md:hidden"
+        style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
+      >
         best experience on desktop
       </h2>
       {Array.from({ length: 30 }).map((_, index) => (
