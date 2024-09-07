@@ -106,6 +106,7 @@ const Hero = () => {
           );
         });
       } else if (!isMobile) {
+        gsap.set(headers, { opacity: 1 });
         gsap.ticker.add(() => {
           headers.forEach((header, index) => {
             const xSet = gsap.quickSetter(header, "x", "px");
