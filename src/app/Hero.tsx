@@ -30,7 +30,7 @@ const Hero = () => {
               -1;
         const randomY =
           Math.random() *
-          Math.min(window.innerHeight / 1.5, 664 / 2) *
+          Math.min(window.innerHeight / 1.5, 700 / 2) *
           (Math.random() < 0.5 ? -1 : 1);
         const tl = gsap.timeline({ repeat: -1 });
         tl.from(particle, {
@@ -125,34 +125,36 @@ const Hero = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen max-h-[664px] w-full overflow-hidden"
+      className="relative h-screen max-h-[700px] w-full overflow-hidden md:py-6"
     >
-      {HEADER_COLORS.map((color, index) => (
-        <h1
-          key={color}
-          className="hero-header"
-          style={{
-            color,
-            zIndex: index,
-            left: `calc(50% + ${index * 6}px)`,
-            top: `calc(50% - ${index * 3}px)`,
-          }}
-        >
-          Motion <span className="relative block left-10">Script</span>
-        </h1>
-      ))}
-      <h2 className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 opacity-50 md:hidden">
-        best experience on desktop
-      </h2>
-      {Array.from({ length: 30 }).map((_, index) => (
-        <div
-          key={`${index}-particle`}
-          className={clsx(
-            "particle",
-            index % 3 === 0 ? "plus" : index % 3 === 1 ? "box" : "circle"
-          )}
-        />
-      ))}
+      <div className="h-full w-full bg-black md:border-2 md:border-gray-700 md:rounded-[100px] shadow-[inset_0_0_20px_rgba(255,255,255,0.25)]">
+        {HEADER_COLORS.map((color, index) => (
+          <h1
+            key={color}
+            className="hero-header"
+            style={{
+              color,
+              zIndex: index,
+              left: `calc(50% + ${index * 6}px)`,
+              top: `calc(50% - ${index * 3}px)`,
+            }}
+          >
+            Motion <span className="relative block left-10">Script</span>
+          </h1>
+        ))}
+        <h2 className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 opacity-50 md:hidden">
+          best experience on desktop
+        </h2>
+        {Array.from({ length: 30 }).map((_, index) => (
+          <div
+            key={`${index}-particle`}
+            className={clsx(
+              "particle",
+              index % 3 === 0 ? "plus" : index % 3 === 1 ? "box" : "circle"
+            )}
+          />
+        ))}
+      </div>
     </div>
   );
 };
