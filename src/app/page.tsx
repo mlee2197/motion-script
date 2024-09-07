@@ -5,10 +5,8 @@ export default function Home() {
     <div className="max-w-[1280px] mx-auto">
       <main>
         <Hero />
-        {/* <h1 className="text-5xl">Animation Suite</h1>
-        <h2 className="font-mono text-xl mt-4">Made by Matt Lee</h2> */}
       </main>
-      <footer className="font-mono">
+      <footer className="flex flex-col gap-6 md:flex-row ">
         <a href="https://github.com/mattlee007/animation-suite">GitHub</a>
         <a href="https://www.linkedin.com/in/matthewlee1297/">Linkedin</a>
         <a href="mailto:mlee2197@gmail.com">Email</a>

@@ -12,10 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        fadeIn: "fadeIn 1s ease-in-out",
+      },
     },
     fontFamily: {
-      sans: ["var(--font-geist-sans)"],
-      mono: ["var(--font-geist-mono)"],
+      montserrat: ["var(--font-montserrat)"],
+      montserratAlternates: ["var(--font-montserrat-alternates)"],
       shrikhand: ["var(--font-shrikhand)"],
     },
   },

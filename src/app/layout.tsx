@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Shrikhand } from "next/font/google";
+import { Shrikhand, Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const shrikhand = Shrikhand({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-shrikhand",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-montserrat",
+  style: ["italic"]
+});
+
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-montserrat-alternates",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${shrikhand.variable} antialiased`}
+        className={`${montserrat.variable} ${montserratAlternates.variable} ${shrikhand.variable} antialiased`}
       >
         {children}
       </body>

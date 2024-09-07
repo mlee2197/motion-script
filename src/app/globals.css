@@ -21,11 +21,15 @@ body {
 
 @layer base {
   body {
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-montserrat-alternates);
   }
 
   h1 {
     font-family: var(--font-shrikhand);
+  }
+
+  h2 {
+    font-family: var(--font-montserrat);
   }
 }
 
@@ -33,6 +37,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 }
 
 @layer components {
