@@ -142,7 +142,7 @@ const Hero = () => {
         </h1>
       ))}
       <h2
-        className="absolute w-max top-2/3 left-1/2 -translate-x-2/3 text-gray-500 opacity-0 animate-fadeIn md:hidden"
+        className="absolute w-max bottom-[10%] left-1/2 -translate-x-1/2 text-gray-500 opacity-0 animate-fadeIn md:hidden"
         style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
       >
         best experience on desktop
