@@ -34,8 +34,11 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .container-padding-x {
+    @apply px-4 md:px-8;
+  }
+  .container-padding-y {
+    @apply py-3 md:py-4;
   }
 
   @keyframes fadeIn {
