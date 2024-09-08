@@ -91,4 +91,8 @@ body {
   .hero-header {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 origin-[-30%_60%] text-7xl tracking-wide md:text-9xl;
   }
+  
+  .tag {
+    @apply w-max skew-x-[20deg] rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-lg px-4 py-1 text-xs [&_div]:skew-x-[-20deg] [&_div]:mix-blend-difference;
+  }
 }
