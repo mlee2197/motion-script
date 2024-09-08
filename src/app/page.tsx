@@ -5,9 +5,6 @@ export default function Home() {
     <div className="max-w-[1280px] mx-auto">
       <main>
         <Hero />
-        <h2 className="text-center text-xl mt-8 mb-12">
-          30 Days, 30 Animations: A Daily Showcase of Web Animation Creativity
-        </h2>
       </main>
       <footer className="flex gap-6 container-padding-x container-padding-y">
         {/* TODO: update to use icons */}

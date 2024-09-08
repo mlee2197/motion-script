@@ -23,7 +23,7 @@ const Hero = () => {
     const generateParticles = () => {
       const particles = [];
       const maxWidth = Math.min(window.innerWidth * 1.25, 1440);
-      const maxHeight = Math.min(window.innerHeight / 1.5, 664 / 2);
+      const maxHeight = window.innerHeight / 1.5;
 
       for (let i = 0; i < numParticles; i++) {
         const angle =
@@ -34,7 +34,6 @@ const Hero = () => {
         particles.push({ x, y });
       }
 
-      // Separate particles into left and right groups
       const leftParticles = shuffleArray(particles);
       const rightParticles = shuffleArray(particles);
 
@@ -146,7 +145,7 @@ const Hero = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen max-h-[664px] w-full overflow-hidden"
+      className="relative h-screen w-full overflow-hidden"
     >
       {particles.left.map((particle, index) => (
         <div
@@ -184,10 +183,11 @@ const Hero = () => {
         </h1>
       ))}
       <h2
-        className="absolute w-max bottom-[10%] left-1/2 -translate-x-1/2 text-gray-500 opacity-0 animate-fadeIn md:hidden"
+        className="absolute w-full px-4 text-center bottom-[10%] left-1/2 -translate-x-1/2 text-gray-400 opacity-0 animate-fadeIn md:text-xl"
         style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
       >
-        best experience on desktop
+        30 Days, 30 Animations: A Daily Showcase of Web Animation Creativity
+        <span className="block mt-4 text-gray-500 md:hidden">Best experience on desktop</span>
       </h2>
     </div>
   );
