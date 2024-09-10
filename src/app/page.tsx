@@ -5,6 +5,7 @@ import {
   COMPONENT_CATEGORIES,
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
+import PlayRestart from "./animations/PlayRestart";
 
 export default function Home() {
   return (
@@ -47,7 +48,7 @@ export default function Home() {
             tags={[COMPONENT_CATEGORIES.card, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.gsap}
           >
-            <div>Button</div>
+            <PlayRestart />
           </Card>
         </div>
       </main>
