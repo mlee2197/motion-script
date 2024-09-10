@@ -111,57 +111,52 @@ body {
     @apply grid grid-cols-5 h-[200px] w-[200px];
     .box {
       @apply relative p-1 w-10 h-10 bg-transparent;
+    }
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        background-color: #4d4d4d;
-        transition: all 0.1s ease-in-out;
-      }
+    .box > div {
+      @apply w-full h-full bg-gray-500 transition-all duration-100;
     }
 
     .box-col {
       @apply col-span-1 h-full w-full items-center justify-center;
     }
 
-    .box:hover::before {
+    .box:hover > div {
       background-color: aquamarine;
       transform: scale(1.1) translateY(-10px);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
     }
 
-    .box-col:has(.box-1:hover)+.box-col .box-1::before,
-    .box-col:has(.box-2:hover)+.box-col .box-2::before,
-    .box-col:has(.box-3:hover)+.box-col .box-3::before,
-    .box-col:has(.box-4:hover)+.box-col .box-4::before,
-    .box-col:has(.box-5:hover)+.box-col .box-5::before {
+    .box-col:has(.box-1:hover)+.box-col .box-1,
+    .box-col:has(.box-2:hover)+.box-col .box-2,
+    .box-col:has(.box-3:hover)+.box-col .box-3,
+    .box-col:has(.box-4:hover)+.box-col .box-4,
+    .box-col:has(.box-5:hover)+.box-col .box-5 {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: right;
       transform: rotateY(15deg) skewY(15deg);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
 
-    .box-col:has(+ .box-col .box-1:hover) .box-1::before,
-    .box-col:has(+ .box-col .box-2:hover) .box-2::before,
-    .box-col:has(+ .box-col .box-3:hover) .box-3::before,
-    .box-col:has(+ .box-col .box-4:hover) .box-4::before,
-    .box-col:has(+ .box-col .box-5:hover) .box-5::before {
+    .box-col:has(+ .box-col .box-1:hover) .box-1,
+    .box-col:has(+ .box-col .box-2:hover) .box-2,
+    .box-col:has(+ .box-col .box-3:hover) .box-3,
+    .box-col:has(+ .box-col .box-4:hover) .box-4,
+    .box-col:has(+ .box-col .box-5:hover) .box-5 {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: left;
       transform: rotateY(-15deg) skewY(-15deg);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
 
-    .box:hover+.box::before {
+    .box:hover+.box > div {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: bottom;
       transform: rotateX(15deg) scale(1.1, 1.35) perspective(700px);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
 
-    .box:has(+ .box:hover)::before {
+    .box:has(+ .box:hover) > div {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: top;
       transform: scale(1.1, 0.7) rotateX(-15deg) perspective(700px);
