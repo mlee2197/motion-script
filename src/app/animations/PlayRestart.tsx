@@ -4,8 +4,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 
-import Rocket from "../../../public/rocket.svg";
-import Moon from "../../../public/moon.svg";
+import Rocket from "@/assets/rocket.svg";
+import Moon from "@/assets/moon.svg";
 
 const PlayRestart = () => {
   const ref = useRef<HTMLDivElement>(null);

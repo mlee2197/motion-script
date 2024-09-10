@@ -183,7 +183,7 @@ const Hero = () => {
         </h1>
       ))}
       <h2
-        className="absolute w-full px-4 text-center bottom-[10%] left-1/2 -translate-x-1/2 text-gray-400 opacity-0 animate-fadeIn md:text-xl"
+        className="absolute w-[38ch] px-4 text-center bottom-[10%] left-1/2 -translate-x-1/2 text-gray-400 opacity-0 animate-fadeIn md:text-xl"
         style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
       >
         30 Days, 30 Animations: A Daily Showcase of Web Animation Creativity

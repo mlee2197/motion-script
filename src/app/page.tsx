@@ -5,14 +5,15 @@ import {
   COMPONENT_CATEGORIES,
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
+import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 
 export default function Home() {
   return (
-    <div className="max-w-[1280px] mx-auto">
+    <div className="max-w-[1440px] mx-auto">
       <main>
         <Hero />
-        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 lg:px-6 lg:grid-cols-3">
+        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[48px] lg:grid-cols-3">
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.has, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.css}
@@ -52,13 +53,7 @@ export default function Home() {
           </Card>
         </div>
       </main>
-      <footer className="flex gap-6 mt-10 container-padding-x container-padding-y md:mt-20">
-        {/* TODO: update to use icons */}
-        <a href="https://github.com/mattlee007/animation-suite">GitHub</a>
-        <a href="https://www.linkedin.com/in/matthewlee1297/">Linkedin</a>
-        <a href="mailto:mlee2197@gmail.com">Email</a>
-        <a href="https://github.com/mlee2197/motion-script">Portfolio</a>
-      </footer>
+      <Footer />
     </div>
   );
 }
