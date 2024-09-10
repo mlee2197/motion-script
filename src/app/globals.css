@@ -108,6 +108,7 @@ body {
 
   /* Animation 1 */
   .animation-1 {
+    @apply flex items-center justify-center h-[200px] w-[200px];
     .box {
       @apply relative p-1 w-10 h-10 bg-transparent;
 
