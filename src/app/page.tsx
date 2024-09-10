@@ -11,18 +11,34 @@ export default function Home() {
     <div className="max-w-[1280px] mx-auto">
       <main>
         <Hero />
-        <div className="grid gap-6 px-4 py-8">
+        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 lg:px-6 lg:grid-cols-3">
           <Card
-            component={COMPONENT_CATEGORIES.button}
-            selector={CSS_PROPERTY_CATEGORIES.has}
-            tools={[ANIMATION_TOOLS.css]}
+            tags={[
+              CSS_PROPERTY_CATEGORIES.has,
+              CSS_PROPERTY_CATEGORIES.hover,
+            ]}
+            tool={ANIMATION_TOOLS.css}
           >
-            <div>Button</div>
+            <div className="animation-1 flex items-center justify-center h-[248px] w-full">
+              {
+                Array.from({ length: 5 }).map((_, i) => (
+                  <div key={i} className="box-col grid grid-rows-5 col-span-1">
+                    <div className="box box-1"></div>
+                    <div className="box box-2"></div>
+                    <div className="box box-3"></div>
+                    <div className="box box-4"></div>
+                    <div className="box box-5"></div>
+                  </div>
+                ))
+              }
+            </div>
           </Card>
           <Card
-            component={COMPONENT_CATEGORIES.card}
-            selector={CSS_PROPERTY_CATEGORIES.hover}
-            tools={[ANIMATION_TOOLS.css]}
+            tags={[
+              COMPONENT_CATEGORIES.card,
+              CSS_PROPERTY_CATEGORIES.hover,
+            ]}
+            tool={ANIMATION_TOOLS.gsap}
           >
             <div>Button</div>
           </Card>

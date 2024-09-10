@@ -1,36 +1,31 @@
-import { TagT } from "@/types";
+import { TagT, ToolT } from "@/types";
+import Image from "next/image";
 
 interface CardProps {
   children: React.ReactNode;
-  component: TagT;
-  selector?: TagT;
-  tools?: Array<string>;
+  tags: TagT[];
+  tool?: ToolT;
 }
 
-const Card = ({ children, component, selector, tools }: CardProps) => {
+const Card = ({ children, tags, tool }: CardProps) => {
   return (
     <div>
-      <div className="min-w-[248px] min-h-[248px] shadow-inner bg-white/5 [&_div]:w-full [&_div]:h-full">
+      <div className="min-w-[248px] min-h-[248px] shadow-inner bg-white/5">
         {children}
       </div>
       <div className="w-full flex justify-end gap-2 mt-2">
-        <div
-          className="tag shadow-md"
-          style={{ backgroundColor: component.color }}
-        >
-          <div>{component.name}</div>
-        </div>
-        {selector && (
+        {tags.map((tag) => (
           <div
+            key={tag.name}
             className="tag shadow-md"
-            style={{ backgroundColor: selector.color }}
+            style={{ backgroundColor: tag.color }}
           >
-            <div className="">{selector.name}</div>
+            <div>{tag.name}</div>
           </div>
-        )}
-        {tools && tools.length > 0 && (
-          <div className="text-xs rounded-full bg-gray-600 aspect-square px-1 shadow-md">
-            {tools.join(", ")}
+        ))}
+        {tool && (
+          <div className="flex items-center justify-center text-xs rounded-full aspect-square px-1 shadow-md" style={{ backgroundColor: tool.color }}>
+            <Image src={tool.icon} alt={tool.name} width={24} height={24} />
           </div>
         )}
       </div>

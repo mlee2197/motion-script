@@ -37,6 +37,7 @@ body {
   .container-padding-x {
     @apply px-4 md:px-8;
   }
+
   .container-padding-y {
     @apply py-3 md:py-4;
   }
@@ -45,11 +46,12 @@ body {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
   }
-  
+
 }
 
 @layer components {
@@ -62,8 +64,11 @@ body {
     width: 32px;
     height: 32px;
   }
+
   .plus {
-    &:before, &:after {
+
+    &:before,
+    &:after {
       content: "";
       position: absolute;
       top: 50%;
@@ -72,27 +77,91 @@ body {
       width: 40%;
       height: 100%;
     }
+
     &:before {
       transform: translate(-50%, -50%) rotate(90deg);
     }
+
     &:after {
       transform: translate(-50%, -50%);
     }
   }
+
   .box {
-      background-color: #4d4d4d;
+    background-color: #4d4d4d;
   }
+
   .circle {
     width: 24px;
     height: 24px;
     border: 4px solid #555242;
     border-radius: 50%;
   }
+
   .hero-header {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 origin-[-30%_60%] text-7xl tracking-wide md:text-9xl;
   }
-  
+
   .tag {
-    @apply w-max skew-x-[20deg] rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-lg px-4 py-1 text-xs [&_div]:skew-x-[-20deg] [&_div]:mix-blend-difference;
+    @apply flex items-center justify-center w-max skew-x-[20deg] rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-lg px-4 py-1 text-xs [&_div]:skew-x-[-20deg] [&_div]:mix-blend-difference;
+  }
+
+  /* Animation 1 */
+  .animation-1 {
+    .box {
+      @apply relative p-1 w-10 h-10 bg-transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-color: #4d4d4d;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+
+    .box:hover::before {
+      background-color: aquamarine;
+      transform: scale(1.1) translateY(-10px);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+    }
+
+    .box-col:has(.box-1:hover)+.box-col .box-1::before,
+    .box-col:has(.box-2:hover)+.box-col .box-2::before,
+    .box-col:has(.box-3:hover)+.box-col .box-3::before,
+    .box-col:has(.box-4:hover)+.box-col .box-4::before,
+    .box-col:has(.box-5:hover)+.box-col .box-5::before {
+      background-color: rgba(127, 255, 212, 0.50);
+      transform-origin: right;
+      transform: rotateY(15deg) skewY(15deg);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
+    }
+
+    .box-col:has(+ .box-col .box-1:hover) .box-1::before,
+    .box-col:has(+ .box-col .box-2:hover) .box-2::before,
+    .box-col:has(+ .box-col .box-3:hover) .box-3::before,
+    .box-col:has(+ .box-col .box-4:hover) .box-4::before,
+    .box-col:has(+ .box-col .box-5:hover) .box-5::before {
+      background-color: rgba(127, 255, 212, 0.50);
+      transform-origin: left;
+      transform: rotateY(-15deg) skewY(-15deg);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
+    }
+
+    .box:hover+.box::before {
+      background-color: rgba(127, 255, 212, 0.50);
+      transform-origin: bottom;
+      transform: rotateX(15deg) scale(1.1, 1.35) perspective(700px);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
+    }
+
+    .box:has(+ .box:hover)::before {
+      background-color: rgba(127, 255, 212, 0.50);
+      transform-origin: top;
+      transform: scale(1.1, 0.7) rotateX(-15deg) perspective(700px);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
+    }
+
   }
 }
