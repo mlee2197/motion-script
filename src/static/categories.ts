@@ -1,3 +1,27 @@
+import CSS from "../../public/css.png";
+import GSAP from "../../public/gsap.png";
+import JS from "../../public/js.png";
+
+export const ANIMATION_TOOLS = {
+  gsap: {
+    name: "GSAP",
+    color: "#02f34a",
+    icon: GSAP,
+  },
+  css: {
+    name: "CSS",
+    color: "#379AD6",
+    icon: CSS,
+  },
+  javascript: {
+    name: "JavaScript",
+    color: "#E7D24A",
+    icon: JS,
+  },
+  // canvas: "canvas",
+};
+
+
 export const CSS_PROPERTY_CATEGORIES = {
   hover: {
     name: "Hover",
@@ -34,18 +58,4 @@ export const COMPONENT_CATEGORIES = {
     name: "Navbar",
     color: "#FFA500",
   },
-};
-
-// TODO update with icons
-export const ANIMATION_TOOLS = {
-  gsap: "gsap",
-  framer: "framer",
-  react: "react",
-  tailwind: "tailwind",
-  css: "css",
-  javascript: "javascript",
-  typescript: "typescript",
-  html: "html",
-  svg: "svg",
-  canvas: "canvas",
 };
