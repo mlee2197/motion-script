@@ -45,14 +45,14 @@ export default function Home() {
             </div>
           </Card>
           <Card
-            tags={[COMPONENT_CATEGORIES.card, CSS_PROPERTY_CATEGORIES.hover]}
+            tags={[COMPONENT_CATEGORIES.button]}
             tool={ANIMATION_TOOLS.gsap}
           >
             <PlayRestart />
           </Card>
         </div>
       </main>
-      <footer className="flex gap-6 container-padding-x container-padding-y">
+      <footer className="flex gap-6 mt-10 container-padding-x container-padding-y md:mt-20">
         {/* TODO: update to use icons */}
         <a href="https://github.com/mattlee007/animation-suite">GitHub</a>
         <a href="https://www.linkedin.com/in/matthewlee1297/">Linkedin</a>

@@ -25,26 +25,26 @@ export const ANIMATION_TOOLS = {
 export const CSS_PROPERTY_CATEGORIES = {
   hover: {
     name: "Hover",
-    color: "#832",
+    color: "#3CBBB1",
   },
   has: {
     name: ":has",
-    color: "#00FFFF",
+    color: "#EE4266",
   },
   onScroll: {
     name: "onScroll",
-    color: "#90EE90",
+    color: "#A2FAA3",
   },
   onLoad: {
     name: "onLoad",
-    color: "#FFA500",
+    color: "#0471A6",
   },
 };
 
 export const COMPONENT_CATEGORIES = {
   button: {
     name: "Button",
-    color: "#FFD700",
+    color: "#C4CBCA",
   },
   card: {
     name: "Card",
