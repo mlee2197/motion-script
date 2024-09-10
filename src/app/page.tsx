@@ -21,7 +21,7 @@ export default function Home() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className="box-col grid grid-rows-5 col-span-1 h-full"
+                    className="box-col"
                   >
                     <div className="box box-1"></div>
                     <div className="box box-2"></div>

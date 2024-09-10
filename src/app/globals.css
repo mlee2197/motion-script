@@ -122,6 +122,10 @@ body {
       }
     }
 
+    .box-col {
+      @apply col-span-1 h-full w-full items-center justify-center;
+    }
+
     .box:hover::before {
       background-color: aquamarine;
       transform: scale(1.1) translateY(-10px);
