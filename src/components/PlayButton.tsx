@@ -54,7 +54,6 @@ const PlayButton = ({ onClick, className }: PlayButtonProps) => {
 
   const handleClick = () => {
     if (state === "play") animatePlay();
-    else animateReplay();
     onClick();
   };
 
@@ -63,12 +62,12 @@ const PlayButton = ({ onClick, className }: PlayButtonProps) => {
       onClick={handleClick}
       onMouseEnter={state === "replay" ? animateReplay : undefined}
       className={clsx(
-        "relative aspect-square h-10 w-10 p-1 m-2 border-2 border-white/30 rounded-lg overflow-hidden",
+        "absolute aspect-square h-10 w-10 p-1 m-2 border-2 border-white/30 rounded-lg overflow-hidden z-10",
         className
       )}
     >
       <div ref={ref} className="relative h-full w-full">
-        <svg viewBox="0 0 100 100" className="absolutew-full h-full">
+        <svg viewBox="0 0 100 100" className="absolute w-full h-full">
           <circle
             cx="50"
             cy="50"

@@ -162,6 +162,5 @@ body {
       transform: scale(1.1, 0.7) rotateX(-15deg) perspective(700px);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
-
   }
 }
