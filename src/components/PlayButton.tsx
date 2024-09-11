@@ -65,6 +65,7 @@ const PlayButton = ({ onClick, className }: PlayButtonProps) => {
         "absolute top-0 left-0 aspect-square h-10 w-10 p-1 m-2 border-2 border-white/30 rounded-lg overflow-hidden z-10",
         className
       )}
+      aria-label="Play"
     >
       <div ref={ref} className="relative h-full w-full">
         <svg viewBox="0 0 100 100" className="absolute w-full h-full">

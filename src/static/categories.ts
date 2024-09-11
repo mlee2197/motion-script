@@ -37,7 +37,7 @@ export const CSS_PROPERTY_CATEGORIES = {
   },
   onLoad: {
     name: "onLoad",
-    color: "#0471A6",
+    color: "#1e91c9",
   },
 };
 
