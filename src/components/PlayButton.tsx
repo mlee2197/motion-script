@@ -62,7 +62,7 @@ const PlayButton = ({ onClick, className }: PlayButtonProps) => {
       onClick={handleClick}
       onMouseEnter={state === "replay" ? animateReplay : undefined}
       className={clsx(
-        "absolute aspect-square h-10 w-10 p-1 m-2 border-2 border-white/30 rounded-lg overflow-hidden z-10",
+        "absolute top-0 left-0 aspect-square h-10 w-10 p-1 m-2 border-2 border-white/30 rounded-lg overflow-hidden z-10",
         className
       )}
     >

@@ -73,7 +73,7 @@ const PlayRestart = () => {
   };
 
   return (
-    <div className="relative h-[248px] w-full overflow-hidden">
+    <div className="animation-container">
       <PlayButton onClick={animatePlay} />
       <div ref={ref} className="relative h-full w-full">
         <svg viewBox="0 0 100 100" className="w-full h-full">
