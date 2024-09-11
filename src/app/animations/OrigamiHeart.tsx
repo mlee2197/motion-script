@@ -135,8 +135,8 @@ const OrigamiHeart = () => {
         <div className="l-fold absolute bottom-4 -left-6 -translate-x-[15px] w-24 h-5 bg-[#232323] rotate-45 z-0"></div>
         <div className="r-fold absolute top-4 -right-6 translate-x-[15px] w-24 h-5 bg-[#232323] rotate-45 z-0"></div>
 
-        <div className="absolute top-0 left-0 w-[100px] h-[100px] bg-gradient-to-br from-transparent via-transparent via-[48%] to-[48%] to-red-200"></div>
-        <div className="t-triangle absolute -top-1/2 -left-1/2 -translate-x-[13px] translate-y-[55px] border-[68px] border-transparent border-r-red-200 origin-right rotate-45"></div>
+        <div className="absolute top-0 left-0 w-[100px] h-[100px] bg-gradient-to-br from-transparent via-transparent via-[49.5%] to-[49.5%] to-red-200"></div>
+        <div className="t-triangle absolute -top-1/2 -left-1/2 -translate-x-[13px] translate-y-[55px] border-[69px] border-transparent border-r-red-200 origin-right rotate-45"></div>
 
         <div className="l-box absolute bottom-0 left-0 h-[50px] w-[50px] bg-red-200 origin-top"></div>
         <div className="r-box absolute top-0 right-0 h-[50px] w-[50px] bg-red-200 origin-left"></div>
