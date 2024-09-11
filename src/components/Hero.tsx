@@ -19,7 +19,9 @@ const Hero = () => {
   }>({ left: [], right: [] });
 
   useEffect(() => {
-    const numParticles = 30;
+    const numParticles = 18;
+    const chanceRight = 0.6;
+    const chanceTop = 0.6;
     const generateParticles = () => {
       const particles = [];
       const maxWidth = Math.min(window.innerWidth * 1.25, 1440);
@@ -27,9 +29,9 @@ const Hero = () => {
 
       for (let i = 0; i < numParticles; i++) {
         const angle =
-          Math.random() * Math.PI + (Math.random() < 0.5 ? 0 : Math.PI);
-        const x = Math.cos(angle) * maxWidth;
-        const y = (Math.random() > 0.5 ? -1 : 1) * maxHeight;
+          Math.random() * Math.PI + (Math.random() < chanceRight ? 0 : Math.PI);
+        const x = Math.sin(angle) * maxWidth;
+        const y = (Math.random() > chanceTop ? -1 : 1) * maxHeight;
 
         particles.push({ x, y });
       }
@@ -54,7 +56,7 @@ const Hero = () => {
       ) as HTMLElement[];
 
       const particleDuration = 6;
-      const stagger = 0.25;
+      const stagger = 0.275;
 
       const animateParticles = (particles: HTMLElement[]) => {
         const tl = gsap.timeline({ repeat: -1 });
@@ -174,7 +176,7 @@ const Hero = () => {
           style={{
             color,
             zIndex: index,
-            left: `calc(50% + ${index * 6}px)`,
+            left: `calc(50% + ${index * 8}px)`,
             top: `calc(50% - ${index * 3}px)`,
           }}
         >
@@ -187,7 +189,9 @@ const Hero = () => {
         style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
       >
         30 Days, 30 Animations: A Daily Showcase of Web Animation Creativity
-        <span className="block mt-4 text-gray-500 md:hidden">Best experience on desktop</span>
+        <span className="block mt-4 text-gray-500 md:hidden">
+          Best experience on desktop
+        </span>
       </h2>
     </div>
   );
