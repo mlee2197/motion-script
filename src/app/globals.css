@@ -35,6 +35,10 @@ body {
     @apply py-3 md:py-4;
   }
 
+  .animation-container {
+    @apply relative h-[248px] w-full overflow-hidden;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -102,11 +106,12 @@ body {
   /* Animation 1 */
   .animation-1 {
     @apply grid grid-cols-5 h-[200px] w-[200px];
+
     .box {
       @apply relative p-1 w-10 h-10 bg-transparent;
     }
 
-    .box > div {
+    .box>div {
       @apply w-full h-full bg-gray-500 transition-all duration-100;
     }
 
@@ -114,7 +119,7 @@ body {
       @apply col-span-1 h-full w-full items-center justify-center;
     }
 
-    .box:hover > div {
+    .box:hover>div {
       background-color: aquamarine;
       transform: scale(1.1) translateY(-10px);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
@@ -142,14 +147,14 @@ body {
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
 
-    .box:hover+.box > div {
+    .box:hover+.box>div {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: bottom;
       transform: rotateX(15deg) scale(1.1, 1.35) perspective(700px);
       box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.5);
     }
 
-    .box:has(+ .box:hover) > div {
+    .box:has(+ .box:hover)>div {
       background-color: rgba(127, 255, 212, 0.50);
       transform-origin: top;
       transform: scale(1.1, 0.7) rotateX(-15deg) perspective(700px);
