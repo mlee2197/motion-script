@@ -39,6 +39,10 @@ body {
     @apply relative h-[248px] w-full overflow-hidden;
   }
 
+  #test {
+    filter: url(#noise);
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;

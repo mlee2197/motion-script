@@ -18,6 +18,11 @@ export const ANIMATION_TOOLS = {
     color: "#E7D24A",
     icon: JS,
   },
+  // svg: {
+  //   name: "SVG",
+  //   color: "#FF0000",
+  //   icon: CSS,
+  // },
   // canvas: "canvas",
 };
 
@@ -57,5 +62,9 @@ export const COMPONENT_CATEGORIES = {
   navbar: {
     name: "Navbar",
     color: "#FFA500",
+  },
+  svg: {
+    name: "SVG",
+    color: "#FF0000",
   },
 };
