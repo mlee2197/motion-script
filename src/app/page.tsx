@@ -22,10 +22,7 @@ export default function Home() {
             <div className="relative flex items-center justify-center h-[248px] w-full">
               <div className="animation-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="box-col"
-                  >
+                  <div key={i} className="box-col">
                     <div className="box">
                       <div className="box-1" />
                     </div>

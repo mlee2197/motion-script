@@ -61,41 +61,49 @@ const PlayRestart = () => {
   return (
     <div className="animation-container">
       <PlayButton onClick={animatePlay} />
-      <svg viewBox="0 0 100 100" className="w-full h-full">
-        <defs>
-          <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#e5b346" />
-            <stop offset="90%" stopColor="#ed463a" />
-          </linearGradient>
-        </defs>
-        <circle
-          cx="100"
-          cy="100"
-          r="33"
-          fill="none"
-          stroke="url(#circleGradient)"
-          strokeWidth="30"
-          strokeDasharray={285}
-          strokeDashoffset={285}
-          strokeLinecap="round"
-          className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        />
-      </svg>
-      <Image
-        src={Moon}
-        alt="Moon"
-        className="moon absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.1] rounded-full shadow-[0_0_8px_8px_rgba(255,255,255,0.1)]"
-        width={80}
-        height={80}
-      />
-      <div className="triangleContainer absolute w-full h-full top-0 left-0 ">
+      <div ref={ref} className="w-full h-full">
+        <svg viewBox="0 0 100 100" className="w-full h-full">
+          <defs>
+            <linearGradient
+              id="circleGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stopColor="#e5b346" />
+              <stop offset="90%" stopColor="#ed463a" />
+            </linearGradient>
+          </defs>
+          <circle
+            cx="100"
+            cy="100"
+            r="33"
+            fill="none"
+            stroke="url(#circleGradient)"
+            strokeWidth="30"
+            strokeDasharray={285}
+            strokeDashoffset={285}
+            strokeLinecap="round"
+            className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          />
+        </svg>
         <Image
-          src={Rocket}
-          alt="Rocket"
-          className="triangle absolute bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 origin-bottom"
-          width={120}
-          height={120}
+          src={Moon}
+          alt="Moon"
+          className="moon absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.1] rounded-full shadow-[0_0_8px_8px_rgba(255,255,255,0.1)]"
+          width={80}
+          height={80}
         />
+        <div className="triangleContainer absolute w-full h-full top-0 left-0 ">
+          <Image
+            src={Rocket}
+            alt="Rocket"
+            className="triangle absolute bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 origin-bottom"
+            width={120}
+            height={120}
+          />
+        </div>
       </div>
     </div>
   );
