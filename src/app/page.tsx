@@ -56,7 +56,7 @@ export default function Home() {
           >
             <OrigamiHeart />
           </Card>
-          <Card tags={[COMPONENT_CATEGORIES.svg]} tool={ANIMATION_TOOLS.css}>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
             <Desert />
           </Card>
         </div>
