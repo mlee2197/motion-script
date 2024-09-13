@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const useMousePosition = () => {
-    const ref = useRef<any>(null);
+    const ref = useRef<HTMLDivElement>(null);
     const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
