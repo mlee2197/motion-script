@@ -5,7 +5,7 @@ import gsap from "gsap";
 import useIsMobile from "@/hooks/useIsMobile";
 import clsx from "clsx";
 import { shuffleArray } from "@/misc/utils";
-import { GsapQuickSetter } from "@/types";
+import { GsapQuickSetter } from "@/types/types";
 
 const HEADER_COLORS = ["#E6974E", "#E64E4E", "#FFFFFF"];
 
