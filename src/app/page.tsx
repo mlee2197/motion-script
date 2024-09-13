@@ -15,7 +15,7 @@ export default function Home() {
     <div className="max-w-[1440px] mx-auto">
       <main>
         <Hero />
-        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[48px] lg:grid-cols-3">
+        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.has, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.css}
