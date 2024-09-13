@@ -18,7 +18,6 @@ const Card = ({ children, tags, tool }: CardProps) => {
           <div
             key={tag.name}
             className="tag shadow-md"
-            style={{ backgroundColor: tag.color }}
           >
             <div>{tag.name}</div>
           </div>
