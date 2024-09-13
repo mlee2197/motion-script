@@ -1,0 +1,1 @@
+export type GsapQuickSetter = (value: string) => void;

@@ -1,5 +1,4 @@
 "use client";
-import PlayButton from "@/components/PlayButton";
 import useMousePosition from "@/hooks/useMousePosition";
 import gsap from "gsap";
 import Image from "next/image";
@@ -9,16 +8,14 @@ import Bone from "@/assets/bone.svg";
 import Diamond from "@/assets/diamond.svg";
 import Skull from "@/assets/skull.svg";
 import Snake from "@/assets/snake.svg";
+import { GsapQuickSetter } from "@/static/types";
 
 const Desert = () => {
   const { ref, mouseX, mouseY } = useMousePosition();
-  const setClipPath = useRef<Function | null>(null);
-  const animate = () => {
-
-  };
+  const setClipPath = useRef<GsapQuickSetter | null>(null);
 
   useEffect(() => {
-    setClipPath.current = gsap.quickSetter("#treasure-container", "clipPath");
+    setClipPath.current = gsap.quickSetter("#treasure-container", "clipPath") as GsapQuickSetter;
   }, []);
 
   useEffect(() => {

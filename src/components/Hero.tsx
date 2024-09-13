@@ -5,6 +5,7 @@ import gsap from "gsap";
 import useIsMobile from "@/hooks/useIsMobile";
 import clsx from "clsx";
 import { shuffleArray } from "@/misc/utils";
+import { GsapQuickSetter } from "@/static/types";
 
 const HEADER_COLORS = ["#E6974E", "#E64E4E", "#FFFFFF"];
 
@@ -17,8 +18,8 @@ const Hero = () => {
     left: { x: number; y: number }[];
     right: { x: number; y: number }[];
   }>({ left: [], right: [] });
-  const [xFunctions, setXFunctions] = useState<Function[]>([]);
-  const [yFunctions, setYFunctions] = useState<Function[]>([]);
+  const [xFunctions, setXFunctions] = useState<GsapQuickSetter[]>([]);
+  const [yFunctions, setYFunctions] = useState<GsapQuickSetter[]>([]);
 
   useEffect(() => {
     const numParticles = 18;
@@ -110,8 +111,8 @@ const Hero = () => {
       .reverse() as HTMLElement[];
     if (xFunctions.length === 0 || yFunctions.length === 0) {
       headers.forEach((header) => {
-        setXFunctions((prev) => [...prev, gsap.quickSetter(header, "x", "px")]);
-        setYFunctions((prev) => [...prev, gsap.quickSetter(header, "y", "px")]);
+        setXFunctions((prev) => [...prev, gsap.quickSetter(header, "x", "px") as GsapQuickSetter]);
+        setYFunctions((prev) => [...prev, gsap.quickSetter(header, "y", "px") as GsapQuickSetter]);
       });
     };
 
