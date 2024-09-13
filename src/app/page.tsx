@@ -8,7 +8,7 @@ import {
 import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
-import Image from "next/image";
+import Turbulence from "./animations/Turbulence";
 
 export default function Home() {
   return (
@@ -57,22 +57,7 @@ export default function Home() {
             <OrigamiHeart />
           </Card>
           <Card tags={[COMPONENT_CATEGORIES.svg]} tool={ANIMATION_TOOLS.css}>
-            <div className="relative h-[248px]">
-              <h1>Hello</h1>
-              <svg width="250" height="250">
-                <filter id="noise" x="0%" y="0%" width="100%" height="100%">
-                  <feTurbulence baseFrequency="0.1 0.1" />
-                  <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20" />
-                </filter>
-              </svg>
-              {/* https://tympanus.net/codrops/2019/02/19/svg-filter-effects-creating-texture-with-feturbulence/ */}
-              <Image
-                id="test"
-                src="/stock.jpg"
-                alt="noise"
-                fill
-              />
-            </div>
+            <Turbulence />
           </Card>
         </div>
       </main>
