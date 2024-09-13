@@ -1,4 +1,4 @@
-import { TagT, ToolT } from "@/types";
+import { TagT, ToolT } from "@/types/types";
 import Image from "next/image";
 
 interface CardProps {
