@@ -2,7 +2,7 @@
 import useMousePosition from "@/hooks/useMousePosition";
 import gsap from "gsap";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 
 import Bone from "@/assets/bone.svg";
 import Diamond from "@/assets/diamond.svg";
@@ -13,6 +13,7 @@ import { GsapQuickSetter } from "@/types/types";
 const Desert = () => {
   const { ref, mouseX, mouseY } = useMousePosition();
   const setClipPath = useRef<GsapQuickSetter | null>(null);
+  const seed = useId();
 
   useEffect(() => {
     setClipPath.current = gsap.quickSetter("#treasure-container", "clipPath") as GsapQuickSetter;
@@ -26,10 +27,10 @@ const Desert = () => {
   }, [mouseX, mouseY, ref]);
 
   return (
-    <div ref={ref} className="relative h-[248px] overflow-hidden cursor-crosshair">
-      <svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+    <div ref={ref} className="animation-container cursor-crosshair">
+      <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" >
         <filter id="noise" x="0%" y="0%" width="200%" height="100%">
-          <feTurbulence baseFrequency="0.02 0.02" result="NOISE" />
+          <feTurbulence key={seed} baseFrequency="0.02 0.02" result="NOISE" seed={seed} />
           <feDiffuseLighting in="NOISE" lightingColor="#EBD0A2" surfaceScale="1">
             <feDistantLight azimuth="45" elevation="25" />
           </feDiffuseLighting>
