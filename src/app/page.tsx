@@ -8,7 +8,7 @@ import {
 import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
-import Turbulence from "./animations/Turbulence";
+import Desert from "./animations/Desert";
 
 export default function Home() {
   return (
@@ -57,7 +57,7 @@ export default function Home() {
             <OrigamiHeart />
           </Card>
           <Card tags={[COMPONENT_CATEGORIES.svg]} tool={ANIMATION_TOOLS.css}>
-            <Turbulence />
+            <Desert />
           </Card>
         </div>
       </main>
