@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
 import Desert from "./animations/Desert";
+import Crt from "./animations/Crt";
 
 export default function Home() {
   return (
@@ -58,6 +59,9 @@ export default function Home() {
           </Card>
           <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
             <Desert />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Crt />
           </Card>
         </div>
       </main>

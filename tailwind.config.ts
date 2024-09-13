@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "gray-750": "#2f3745",
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in-out",
