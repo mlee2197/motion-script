@@ -5,6 +5,7 @@ import gsap from "gsap";
 import useIsMobile from "@/hooks/useIsMobile";
 import clsx from "clsx";
 import { shuffleArray } from "@/misc/utils";
+import { GsapQuickSetter } from "@/types";
 
 const HEADER_COLORS = ["#E6974E", "#E64E4E", "#FFFFFF"];
 
@@ -17,6 +18,8 @@ const Hero = () => {
     left: { x: number; y: number }[];
     right: { x: number; y: number }[];
   }>({ left: [], right: [] });
+  const [xFunctions, setXFunctions] = useState<GsapQuickSetter[]>([]);
+  const [yFunctions, setYFunctions] = useState<GsapQuickSetter[]>([]);
 
   useEffect(() => {
     const numParticles = 18;
@@ -47,6 +50,7 @@ const Hero = () => {
 
   // particles animation
   useEffect(() => {
+    if (particles.left.length === 0 || particles.right.length === 0) return;
     const ctx = gsap.context(() => {
       const leftParticleElements = gsap.utils.toArray(
         ".left-particle"
@@ -101,9 +105,16 @@ const Hero = () => {
   // Header animation
   useEffect(() => {
     if (!containerRef.current) return;
+
     const headers = gsap.utils
       .toArray(".hero-header")
       .reverse() as HTMLElement[];
+    if (xFunctions.length === 0 || yFunctions.length === 0) {
+      headers.forEach((header) => {
+        setXFunctions((prev) => [...prev, gsap.quickSetter(header, "x", "px") as GsapQuickSetter]);
+        setYFunctions((prev) => [...prev, gsap.quickSetter(header, "y", "px") as GsapQuickSetter]);
+      });
+    };
 
     const context = gsap.context(() => {
       if (initialAnimation) {
@@ -130,11 +141,9 @@ const Hero = () => {
       } else if (!isMobile) {
         gsap.ticker.add(() => {
           headers.forEach((header, index) => {
-            const xSet = gsap.quickSetter(header, "x", "px");
-            const ySet = gsap.quickSetter(header, "y", "px");
             gsap.delayedCall(index * 0.1, () => {
-              xSet(mouse.x);
-              ySet(mouse.y);
+              xFunctions[index]?.(mouse.x);
+              yFunctions[index]?.(mouse.y);
             });
           });
         });
@@ -142,7 +151,7 @@ const Hero = () => {
       gsap.set(headers, { opacity: 1 });
     }, containerRef);
     return () => context.revert();
-  }, [mouse, isMobile, initialAnimation]);
+  }, [mouse, isMobile, initialAnimation, xFunctions, yFunctions]);
 
   return (
     <div

@@ -8,13 +8,14 @@ import {
 import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
+import Desert from "./animations/Desert";
 
 export default function Home() {
   return (
     <div className="max-w-[1440px] mx-auto">
       <main>
         <Hero />
-        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[48px] lg:grid-cols-3">
+        <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.has, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.css}
@@ -54,6 +55,9 @@ export default function Home() {
             tool={ANIMATION_TOOLS.gsap}
           >
             <OrigamiHeart />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Desert />
           </Card>
         </div>
       </main>
