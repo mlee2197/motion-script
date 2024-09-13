@@ -9,7 +9,7 @@ const useMousePosition = () => {
         if (!container) return;
         const handleMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
-            const { left, top, width, height } = container.getBoundingClientRect();
+            const { left, top } = container.getBoundingClientRect();
             const x = clientX - left;
             const y = clientY - top;
             setMouse({ x, y });

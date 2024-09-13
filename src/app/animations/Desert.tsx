@@ -8,7 +8,7 @@ import Bone from "@/assets/bone.svg";
 import Diamond from "@/assets/diamond.svg";
 import Skull from "@/assets/skull.svg";
 import Snake from "@/assets/snake.svg";
-import { GsapQuickSetter } from "@/static/types";
+import { GsapQuickSetter } from "@/types";
 
 const Desert = () => {
   const { ref, mouseX, mouseY } = useMousePosition();
@@ -23,7 +23,7 @@ const Desert = () => {
       setClipPath.current?.(`circle(30px at ${mouseX}px ${mouseY}px)`);
     }, ref);
     return () => ctx.revert();
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, ref]);
 
   return (
     <div ref={ref} className="relative h-[248px] overflow-hidden cursor-crosshair">

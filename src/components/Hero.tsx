@@ -5,7 +5,7 @@ import gsap from "gsap";
 import useIsMobile from "@/hooks/useIsMobile";
 import clsx from "clsx";
 import { shuffleArray } from "@/misc/utils";
-import { GsapQuickSetter } from "@/static/types";
+import { GsapQuickSetter } from "@/types";
 
 const HEADER_COLORS = ["#E6974E", "#E64E4E", "#FFFFFF"];
 
@@ -151,7 +151,7 @@ const Hero = () => {
       gsap.set(headers, { opacity: 1 });
     }, containerRef);
     return () => context.revert();
-  }, [mouse, isMobile, initialAnimation]);
+  }, [mouse, isMobile, initialAnimation, xFunctions, yFunctions]);
 
   return (
     <div

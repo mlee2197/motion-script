@@ -10,3 +10,5 @@ export type ToolT = {
   color: string;
   icon: StaticImageData;
 };
+
+export type GsapQuickSetter = (value: string | number) => void;
