@@ -12,7 +12,7 @@ const Sunset = () => {
         <filter id="water-ripples" width="200%" height="100%">
           <feTurbulence
             id="turbulence"
-            baseFrequency="0.005 0.0175"
+            baseFrequency="0.006 0.0175"
             type="turbulence"
             numOctaves="2"
             result="NOISE"
@@ -21,9 +21,15 @@ const Sunset = () => {
           <animate
             href="#turbulence"
             attributeName="baseFrequency"
-            dur="35s"
-            keyTimes="0;1"
-            values="0.005 0.02;0.005 0.05"
+            dur="15s"
+            calcMode="spline"
+            keyTimes="0;0.5;1"
+            keySplines="0.2 0 0.65 1; 0.3 0 0.7 1"
+            values="
+            0.008 0.015;
+            0.002 0.035;
+            0.008 0.015
+            "
             repeatCount="indefinite"
           ></animate>
         </filter>
