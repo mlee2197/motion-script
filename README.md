@@ -49,5 +49,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Blob
 - [ ] Sound Wave
 - [ ] cool hover cursor
-- [ ] sunset turbulence
+- [x] sunset turbulence
 - [ ] text background animation
