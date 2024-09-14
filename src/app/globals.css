@@ -39,6 +39,17 @@ body {
     @apply relative h-[248px] w-full overflow-hidden;
   }
 
+  .sun-rays {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 50% 50%, #fdcd73 0%, rgba(255, 255, 255, 0) 65%);
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
