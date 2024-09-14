@@ -50,8 +50,8 @@ const Crt = () => {
         <div className="col-span-2 flex flex-col h-full border-[5px] border-x-gray-800 border-y-gray-750 bg-gray-800 box-border">
           <div className="relative top-3 w-[calc(100%-16px)] max-w-[40px] h-6 mx-auto bg-gray-750" onClick={toggleTv}>
             <div className="switch" style={{ transform: on ? 'skewY(-10deg)' : 'skewY(10deg)' }}>
-              <span className="absolute top-1/2 -translate-y-1/2 left-[2px] w-2 h-2 rounded-full border border-gray-400 skew-y-12 pointer-events-none" />
-              <span className="absolute top-1/2 -translate-y-1/2 right-[4px] w-[1px] h-2 bg-gray-400 -skew-y-12">
+              <span className="absolute top-1/2 -translate-y-1/2 right-[4px] w-2 h-2 rounded-full border border-gray-400 skew-y-12 pointer-events-none" />
+              <span className="absolute top-1/2 -translate-y-1/2 left-[6px] w-[1px] h-2 bg-gray-400 -skew-y-12">
               </span>
             </div>
           </div>
