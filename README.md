@@ -46,7 +46,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://www.youtube.com/watch?v=R40_utECAPs
 
 ## Planned Animations
-- [ ] Blob
+- [x] Blob
+- [ ] rotating colored blobs
 - [ ] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
