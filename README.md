@@ -44,10 +44,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://blog.logrocket.com/complete-guide-using-css-filters-svgs/
 - https://css-tricks.com/grainy-gradients/
 - https://www.youtube.com/watch?v=R40_utECAPs
+- https://www.intrepidautomation.com/
+- https://www.accordion.net.au/
 
 ## Planned Animations
 - [ ] Blob
-- [ ] Sound Wave
+- [x] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
 - [ ] text background animation
+- [ ] conversion-friendly animations (text hover)
+- [ ] text blueprint/wireframe -> fill
+- [ ] onscroll
+- [ ] scrolling carousel cards
+- [ ] gsap ball animation
