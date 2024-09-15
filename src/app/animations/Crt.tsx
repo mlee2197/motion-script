@@ -31,7 +31,7 @@ const Crt = () => {
           {
             on && (
               <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className=" rounded-[40%/10%]">
-                <filter id="turbulence" width="110%" height="110%">
+                <filter id="crt-filter" width="110%" height="110%">
                   <feTurbulence baseFrequency="0.40" type="fractalNoise">
                     <animate
                       attributeName="seed"
@@ -42,7 +42,7 @@ const Crt = () => {
                     />
                   </feTurbulence>
                 </filter>
-                <rect width="100%" height="100%" filter="url(#turbulence)" />
+                <rect width="100%" height="100%" filter="url(#crt-filter)" />
               </svg>
             )
           }
