@@ -11,6 +11,7 @@ import OrigamiHeart from "./animations/OrigamiHeart";
 import Desert from "./animations/Desert";
 import Crt from "./animations/Crt";
 import Sunset from "./animations/Sunset";
+import Blob from "./animations/Blob";
 
 export default function Home() {
   return (
@@ -66,6 +67,9 @@ export default function Home() {
           </Card>
           <Card tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}>
             <Sunset />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Blob />
           </Card>
         </div>
       </main>
