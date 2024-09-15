@@ -2,6 +2,7 @@
 import PlayButton from "@/components/PlayButton";
 import clsx from "clsx";
 import { useState } from "react";
+import FireSound from "@/assets/fire-sound_out.mp3";
 
 const Fire = () => {
   const [play, setPlay] = useState(false);
@@ -9,11 +10,11 @@ const Fire = () => {
   const handlePlay = () => {
     if (play) return;
     setPlay(true);
-    // const audio = new Audio("/audio/fire.mp3");
-    // audio.play();
+    const audio = new Audio(FireSound);
+    audio.play();
     setTimeout(() => {
       setPlay(false);
-    }, 7500);
+    }, 2900);
   };
 
   return (
@@ -46,7 +47,7 @@ const Fire = () => {
             <animate
               href="#turbulence-fire"
               attributeName="baseFrequency"
-              dur="8s"
+              dur="3s"
               calcMode="spline"
               from="0.005 0.005"
               to="0.025 0.025"
@@ -57,7 +58,7 @@ const Fire = () => {
             <animate
               href="#fire-displacement-map"
               attributeName="scale"
-              dur="8s"
+              dur="3s"
               calcMode="spline"
               values="1000;100;100;1000"
               keyTimes="0;0.05;0.9;1"
