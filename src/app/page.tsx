@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Card from "@/components/Card";
 import Hero from "../components/Hero";
 import {
@@ -8,10 +9,11 @@ import {
 import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
-import Desert from "./animations/Desert";
-import Crt from "./animations/Crt";
-import Sunset from "./animations/Sunset";
-import Fire from "./animations/Fire";
+
+const Desert = dynamic(() => import("./animations/Desert"), { ssr: false });
+const Crt = dynamic(() => import("./animations/Crt"), { ssr: false });
+const Sunset = dynamic(() => import("./animations/Sunset"), { ssr: true });
+const Fire = dynamic(() => import("./animations/Fire"), { ssr: false });
 
 export default function Home() {
   return (
