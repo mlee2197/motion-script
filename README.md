@@ -54,10 +54,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
-- [ ] text background animation
+- [ ] blocky text with blobbing
 - [ ] conversion-friendly animations (text hover)
 - [ ] text blueprint/wireframe -> fill
-- [ ] onscroll
-- [ ] scrolling carousel cards
-- [ ] gsap ball animation
+- [ ] text background animation
+- [ ] onscroll - timeline waves
 - [ ] clip path animation
