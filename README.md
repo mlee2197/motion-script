@@ -46,6 +46,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://www.youtube.com/watch?v=R40_utECAPs
 - https://www.intrepidautomation.com/
 - https://www.accordion.net.au/
+- https://css-tricks.com/animating-with-clip-path/
+- https://tympanus.net/codrops/2023/10/10/progressively-enhanced-webgl-lens-refraction/
 
 ## Planned Animations
 - [ ] Blob
@@ -58,3 +60,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] onscroll
 - [ ] scrolling carousel cards
 - [ ] gsap ball animation
+- [ ] clip path animation
