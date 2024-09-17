@@ -23,6 +23,36 @@ export default function Home() {
       <main>
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
+          <Card tags={[COMPONENT_CATEGORIES.card]}>
+            <Kaleidoscope />
+          </Card>
+          <Card tags={[COMPONENT_CATEGORIES.card]}>
+            <Shapes />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Fire />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}>
+            <Sunset />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Crt />
+          </Card>
+          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+            <Desert />
+          </Card>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.onLoad]}
+            tool={ANIMATION_TOOLS.gsap}
+          >
+            <OrigamiHeart />
+          </Card>
+          <Card
+            tags={[COMPONENT_CATEGORIES.button]}
+            tool={ANIMATION_TOOLS.gsap}
+          >
+            <PlayRestart />
+          </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.has, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.css}
@@ -50,36 +80,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </Card>
-          <Card
-            tags={[COMPONENT_CATEGORIES.button]}
-            tool={ANIMATION_TOOLS.gsap}
-          >
-            <PlayRestart />
-          </Card>
-          <Card
-            tags={[CSS_PROPERTY_CATEGORIES.onLoad]}
-            tool={ANIMATION_TOOLS.gsap}
-          >
-            <OrigamiHeart />
-          </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
-            <Desert />
-          </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
-            <Crt />
-          </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}>
-            <Sunset />
-          </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
-            <Fire />
-          </Card>
-          <Card tags={[COMPONENT_CATEGORIES.card]}>
-            <Shapes />
-          </Card>
-          <Card tags={[COMPONENT_CATEGORIES.card]}>
-            <Kaleidoscope />
           </Card>
         </div>
       </main>
