@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import PlayRestart from "./animations/PlayRestart";
 import OrigamiHeart from "./animations/OrigamiHeart";
 import Shapes from "./animations/Shapes";
-import Cursor from "./animations/Cursor";
+import Kaleidoscope from "./animations/Kaleidoscope";
 
 const Desert = dynamic(() => import("./animations/Desert"), { ssr: false });
 const Crt = dynamic(() => import("./animations/Crt"), { ssr: false });
@@ -79,7 +79,7 @@ export default function Home() {
             <Shapes />
           </Card>
           <Card tags={[COMPONENT_CATEGORIES.card]}>
-            <Cursor />
+            <Kaleidoscope />
           </Card>
         </div>
       </main>
