@@ -52,10 +52,12 @@ body {
 
   #cursor-animation {
     .cursor {
-      @apply absolute top-0 left-0 w-10 h-10 -translate-x-1/2 -translate-y-1/2 mix-blend-difference;
-      pointer-events: none;
+      @apply absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 mix-blend-difference pointer-events-none;
       transition: background-color 0.3s ease-in-out, clip-path 0.3s ease-in-out;
-      background-color: white;
+    }
+
+    .shape:hover ~ .cursor {
+      @apply w-10 h-10 bg-white;
     }
 
     .shape {
@@ -145,6 +147,24 @@ body {
     }
   }
 
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 @layer components {
