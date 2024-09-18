@@ -19,7 +19,7 @@ const Blob = () => {
     setY.current?.(mouseY - 20);
   }, [mouseX, mouseY]);
 
-  return <div ref={ref} className="animation-container cursor-crosshair bg-white contrast-[1000%]">
+  return <div ref={ref} className="animation-container cursor-crosshair bg-white contrast-[1500%]">
     <div className="mouse-blob w-12 h-12 rounded-full bg-black blur-lg" />
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full grid grid-cols-5 grid-rows-5 gap-4">
       {
