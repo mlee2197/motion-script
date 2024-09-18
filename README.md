@@ -50,8 +50,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Planned Animations
 - [x] Blob
-- [ ] rotating colored blobs
-- [ ] Sound Wave
+- [x] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
 - [ ] blocky text with blobbing
