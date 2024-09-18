@@ -39,11 +39,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - https://css-tricks.com/shape-blobbing-css/
 - https://css-tricks.com/creating-patterns-with-svg-filters/
-- https://css-tricks.com/nailing-that-cool-dissolve-transition/
 - https://tympanus.net/codrops/2019/02/19/svg-filter-effects-creating-texture-with-feturbulence/
 - https://blog.logrocket.com/complete-guide-using-css-filters-svgs/
 - https://css-tricks.com/grainy-gradients/
 - https://www.youtube.com/watch?v=R40_utECAPs
+- https://www.intrepidautomation.com/
+- https://www.accordion.net.au/
+- https://css-tricks.com/animating-with-clip-path/
+- https://tympanus.net/codrops/2023/10/10/progressively-enhanced-webgl-lens-refraction/
 
 ## Planned Animations
 - [x] Blob
@@ -51,4 +54,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
+- [ ] blocky text with blobbing
+- [ ] conversion-friendly animations (text hover)
+- [ ] text blueprint/wireframe -> fill
 - [ ] text background animation
+- [ ] onscroll - timeline waves
+- [ ] clip path animation

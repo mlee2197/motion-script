@@ -11,7 +11,7 @@ const Sunset = () => {
       <svg className="absolute bottom-0 left-0 w-full h-1/2">
         <filter id="water-ripples" width="200%" height="100%">
           <feTurbulence
-            id="turbulence"
+            id="sunset-turbulence"
             baseFrequency="0.006 0.0175"
             type="turbulence"
             numOctaves="2"
@@ -19,7 +19,7 @@ const Sunset = () => {
           />
           <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20" />
           <animate
-            href="#turbulence"
+            href="#sunset-turbulence"
             attributeName="baseFrequency"
             dur="15s"
             calcMode="spline"
