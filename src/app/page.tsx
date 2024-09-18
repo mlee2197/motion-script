@@ -99,33 +99,6 @@ export default function Home() {
               </div>
             </div>
           </Card>
-          <Card
-            tags={[COMPONENT_CATEGORIES.button]}
-            tool={ANIMATION_TOOLS.gsap}
-          >
-            <PlayRestart />
-          </Card>
-          <Card
-            tags={[CSS_PROPERTY_CATEGORIES.onLoad]}
-            tool={ANIMATION_TOOLS.gsap}
-          >
-            <OrigamiHeart />
-          </Card>
-          <Card
-            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
-          >
-            <Desert />
-          </Card>
-          <Card
-            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
-          >
-            <Crt />
-          </Card>
-          <Card
-            tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}
-          >
-            <Sunset />
-          </Card>
         </div>
       </main>
       <Footer />
