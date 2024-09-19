@@ -49,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://tympanus.net/codrops/2023/10/10/progressively-enhanced-webgl-lens-refraction/
 
 ## Planned Animations
-- [ ] Blob
+- [x] Blob
 - [x] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence

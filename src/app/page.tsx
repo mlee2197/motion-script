@@ -12,6 +12,7 @@ import OrigamiHeart from "./animations/OrigamiHeart";
 import Shapes from "./animations/Shapes";
 import Kaleidoscope from "./animations/Kaleidoscope";
 import TurbulentText from "./animations/TurbulentText";
+import Blob from "./animations/Blob";
 
 const Desert = dynamic(() => import("./animations/Desert"), { ssr: false });
 const Crt = dynamic(() => import("./animations/Crt"), { ssr: false });
@@ -24,6 +25,11 @@ export default function Home() {
       <main>
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
+            <Blob />
+          </Card>
           <Card tags={[COMPONENT_CATEGORIES.card]}>
             <TurbulentText />
           </Card>
@@ -33,16 +39,24 @@ export default function Home() {
           <Card tags={[COMPONENT_CATEGORIES.card]}>
             <Shapes />
           </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
             <Fire />
           </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.onLoad, COMPONENT_CATEGORIES.svg]}
+          >
             <Sunset />
           </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
             <Crt />
           </Card>
-          <Card tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
             <Desert />
           </Card>
           <Card
