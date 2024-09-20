@@ -165,6 +165,15 @@ body {
       transform: rotate(-360deg);
     }
   }
+  @keyframes hue-rotate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 }
 
 @layer components {

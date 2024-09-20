@@ -53,6 +53,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Sound Wave
 - [ ] cool hover cursor
 - [x] sunset turbulence
+- [ ] hue-rotate filter
 - [ ] blocky text with blobbing
 - [ ] conversion-friendly animations (text hover)
 - [ ] text blueprint/wireframe -> fill
