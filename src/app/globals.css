@@ -56,14 +56,14 @@ body {
       transition: background-color 0.3s ease-in-out, clip-path 0.3s ease-in-out;
     }
 
-    .shape:hover ~ .cursor {
+    .shape:hover~.cursor {
       @apply w-10 h-10 bg-white;
     }
 
     .shape {
       @apply p-2 w-full h-full;
     }
-    
+
     .triangle {
       @apply bg-red-500 w-full h-full;
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -90,7 +90,7 @@ body {
     }
 
     .octagon {
-       @apply bg-yellow-500 w-full h-full;
+      @apply bg-yellow-500 w-full h-full;
       clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     }
 
@@ -156,6 +156,7 @@ body {
       transform: rotate(360deg);
     }
   }
+
   @keyframes spin-reverse {
     from {
       transform: rotate(0deg);
@@ -165,6 +166,7 @@ body {
       transform: rotate(-360deg);
     }
   }
+
   @keyframes hue-rotate {
     from {
       filter: hue-rotate(0deg);
@@ -301,6 +303,162 @@ body {
       height: 25%;
       border-radius: 0 0 50% 50%;
       background-color: red; */
+    }
+  }
+
+  @keyframes gradient-animated {
+    0% {
+      background-position: 0% 50%
+    }
+
+    50% {
+      background-position: 100% 50%
+    }
+
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  #glowing-text {
+    text-shadow: 2px 2px 1px #fff;
+    background-image: linear-gradient(to right, #3fb194, #b1613f, #e6bb5e);
+    background-size: 200% 200%;
+    animation: gradient-animated 5s linear infinite;
+  }
+
+  /* Animation 1 */
+  #animation-bump {
+    @apply grid grid-cols-10;
+
+    .box-container {
+      @apply relative p-1 w-8 h-8 bg-transparent;
+    }
+
+    .box {
+      @apply w-full h-full transition-all;
+      background-color: gray;
+    }
+
+    .box-col {
+      @apply col-span-1 h-full w-full items-center justify-center;
+    }
+
+    &:has(.circle-1:hover) {
+      .circle-1 > .box {
+        background-color: aquamarine;
+        transform: scale(1.1) translateY(-4px);
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-2 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-3 > .box {
+        background-color: aquamarine;
+        transform: scale(0.5) translateY(-4px);
+        opacity: 0.55;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-4 > .box {
+        background-color: aquamarine;
+        transform: scale(0.25) translateY(-4px);
+        opacity: 0.25;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+    }
+
+    &:has(.circle-2:hover) {
+      .circle-2 > .box {
+        background-color: aquamarine;
+        transform: scale(1.1) translateY(-4px);
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-1 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-3 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-4 > .box {
+        background-color: aquamarine;
+        transform: scale(0.5) translateY(-4px);
+        opacity: 0.5;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+    }
+
+    &:has(.circle-3:hover) {
+      .circle-3 > .box {
+        background-color: aquamarine;
+        transform: scale(1.1) translateY(-4px);
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-1 > .box {
+        background-color: aquamarine;
+        transform: scale(0.5) translateY(-4px);
+        opacity: 0.55;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-2 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-4 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+    }
+
+    &:has(.circle-4:hover) {
+      .circle-4 > .box {
+        background-color: aquamarine;
+        transform: scale(1.1) translateY(-4px);
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-1 > .box {
+        background-color: aquamarine;
+        transform: scale(0.25) translateY(-4px);
+        opacity: 0.25;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-2 > .box {
+        background-color: aquamarine;
+        transform: scale(0.5) translateY(-4px);
+        opacity: 0.55;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
+      .circle-3 > .box {
+        background-color: aquamarine;
+        transform: scale(0.75) translateY(-4px);
+        opacity: 0.75;
+        box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
+      }
+
     }
   }
 }
