@@ -167,15 +167,7 @@ body {
     }
   }
 
-  @keyframes hue-rotate {
-    from {
-      filter: hue-rotate(0deg);
-    }
 
-    to {
-      filter: hue-rotate(360deg);
-    }
-  }
 }
 
 @layer components {
@@ -345,27 +337,27 @@ body {
     }
 
     &:has(.circle-1:hover) {
-      .circle-1 > .box {
+      .circle-1>.box {
         background-color: aquamarine;
         transform: scale(1.1) translateY(-4px);
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-2 > .box {
+      .circle-2>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-3 > .box {
+      .circle-3>.box {
         background-color: aquamarine;
         transform: scale(0.5) translateY(-4px);
         opacity: 0.55;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-4 > .box {
+      .circle-4>.box {
         background-color: aquamarine;
         transform: scale(0.25) translateY(-4px);
         opacity: 0.25;
@@ -374,27 +366,27 @@ body {
     }
 
     &:has(.circle-2:hover) {
-      .circle-2 > .box {
+      .circle-2>.box {
         background-color: aquamarine;
         transform: scale(1.1) translateY(-4px);
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-1 > .box {
+      .circle-1>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-3 > .box {
+      .circle-3>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-4 > .box {
+      .circle-4>.box {
         background-color: aquamarine;
         transform: scale(0.5) translateY(-4px);
         opacity: 0.5;
@@ -403,27 +395,27 @@ body {
     }
 
     &:has(.circle-3:hover) {
-      .circle-3 > .box {
+      .circle-3>.box {
         background-color: aquamarine;
         transform: scale(1.1) translateY(-4px);
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-1 > .box {
+      .circle-1>.box {
         background-color: aquamarine;
         transform: scale(0.5) translateY(-4px);
         opacity: 0.55;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-2 > .box {
+      .circle-2>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-4 > .box {
+      .circle-4>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
@@ -432,27 +424,27 @@ body {
     }
 
     &:has(.circle-4:hover) {
-      .circle-4 > .box {
+      .circle-4>.box {
         background-color: aquamarine;
         transform: scale(1.1) translateY(-4px);
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-1 > .box {
+      .circle-1>.box {
         background-color: aquamarine;
         transform: scale(0.25) translateY(-4px);
         opacity: 0.25;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-2 > .box {
+      .circle-2>.box {
         background-color: aquamarine;
         transform: scale(0.5) translateY(-4px);
         opacity: 0.55;
         box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7);
       }
 
-      .circle-3 > .box {
+      .circle-3>.box {
         background-color: aquamarine;
         transform: scale(0.75) translateY(-4px);
         opacity: 0.75;
@@ -461,4 +453,22 @@ body {
 
     }
   }
+
+  @keyframes star-wars-text-translate {
+    0% {
+      transform: rotateX(60deg) translateY(50%) translateZ(150px);
+    }
+
+    100% {
+      transform: rotateX(60deg) translateY(-150%) translateZ(150px);
+    }
+  }
+
+  #star-wars--text {
+    @apply absolute top-[0%] left-0 p-6 leading-relaxed text-xl text-[#FFE825] font-bold;
+    perspective: 20px;
+    animation: star-wars-text-translate 30s ease-in infinite;
+    text-align: justify;
+  }
+
 }
