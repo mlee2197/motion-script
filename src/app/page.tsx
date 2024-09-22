@@ -6,15 +6,17 @@ import {
   COMPONENT_CATEGORIES,
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
-import Footer from "@/components/Footer";
-import PlayRestart from "./animations/PlayRestart";
-import OrigamiHeart from "./animations/OrigamiHeart";
-import Bump from "./animations/Bump";
+
+const StarWars = dynamic(() => import("./animations/StarWars"));
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
+const PlayRestart = dynamic(() => import("./animations/PlayRestart"), { ssr: false });
+const OrigamiHeart = dynamic(() => import("./animations/OrigamiHeart"), { ssr: false });
+const Bump = dynamic(() => import("./animations/Bump"));
 const Shapes = dynamic(() => import("./animations/Shapes"), { ssr: false });
 const Kaleidoscope = dynamic(() => import("./animations/Kaleidoscope"), { ssr: false });
 const TurbulentText = dynamic(() => import("./animations/TurbulentText"), { ssr: false });
-const Blob = dynamic(() => import("./animations/Blob"), { ssr: false });
-const LoadingBlob = dynamic(() => import("./animations/LoadingBlob"), { ssr: false });
+const Blob = dynamic(() => import("./animations/Blob"));
+const LoadingBlob = dynamic(() => import("./animations/LoadingBlob"));
 
 const Desert = dynamic(() => import("./animations/Desert"), { ssr: false });
 const Crt = dynamic(() => import("./animations/Crt"), { ssr: false });
@@ -27,6 +29,11 @@ export default function Home() {
       <main>
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
+            <StarWars />
+          </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.has, CSS_PROPERTY_CATEGORIES.hover]}
             tool={ANIMATION_TOOLS.css}

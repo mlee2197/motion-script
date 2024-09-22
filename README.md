@@ -58,5 +58,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] conversion-friendly animations (text hover)
 - [ ] text blueprint/wireframe -> fill
 - [ ] text background animation
-- [ ] onscroll - timeline waves
 - [ ] clip path animation
