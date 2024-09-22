@@ -25,12 +25,12 @@ const StarWars = () => {
         the evil Galactic Empire.
         During the battle, Rebel
         spies managed to steal secret
-        plans to the Empire's
+        plans to the Empire&apos;s
         ultimate weapon, the DEATH
         STAR, an armored space
         station with enough power to
         destroy an entire planet.
-        Pursued by the Empire's
+        Pursued by the Empire&apos;s
         sinister agents, Princess
         Leia races home aboard her
         starship, custodian of the
