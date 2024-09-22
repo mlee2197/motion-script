@@ -465,7 +465,7 @@ body {
   }
 
   #star-wars--text {
-    @apply absolute top-[0%] left-0 p-10 leading-relaxed text-xl text-[#FFE825] font-bold;
+    @apply absolute top-[0%] left-0 p-8 leading-relaxed text-xl text-[#FFE825] font-bold;
     perspective: 20px;
     animation: star-wars-text-translate 30s linear infinite;
     text-align: justify;
