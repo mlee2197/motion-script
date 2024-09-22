@@ -456,18 +456,18 @@ body {
 
   @keyframes star-wars-text-translate {
     0% {
-      transform: rotateX(60deg) translateY(50%) translateZ(150px);
+      transform: rotateX(60deg) translateY(50%) translateZ(125px);
     }
 
     100% {
-      transform: rotateX(60deg) translateY(-150%) translateZ(150px);
+      transform: rotateX(60deg) translateY(-150%) translateZ(125px);
     }
   }
 
   #star-wars--text {
-    @apply absolute top-[0%] left-0 p-6 leading-relaxed text-xl text-[#FFE825] font-bold;
+    @apply absolute top-[0%] left-0 p-10 leading-relaxed text-xl text-[#FFE825] font-bold;
     perspective: 20px;
-    animation: star-wars-text-translate 30s ease-in infinite;
+    animation: star-wars-text-translate 30s linear infinite;
     text-align: justify;
   }
 
