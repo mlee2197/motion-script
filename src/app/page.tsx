@@ -7,6 +7,7 @@ import {
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
 
+const TextStroke = dynamic(() => import("./animations/TextStroke"), { ssr: false });
 const Pixel = dynamic(() => import("./animations/Pixel"), { ssr: false });
 const StarWars = dynamic(() => import("./animations/StarWars"));
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
@@ -30,6 +31,11 @@ export default function Home() {
       <main>
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
+            <TextStroke />
+          </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
           >
