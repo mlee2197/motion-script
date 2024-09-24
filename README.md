@@ -60,4 +60,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] text blueprint/wireframe -> fill
 - [ ] text background animation
 - [ ] clip path animation
-- [ ] motion path
+- [x] motion path

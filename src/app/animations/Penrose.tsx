@@ -6,12 +6,14 @@ import PenroseRight from "@/assets/penrose-right.svg";
 
 const Penrose = () => {
   return (
-    <div className="animation-container p-6">
+    <div id="penrose" className="animation-container p-6">
       <div className="relative w-full h-full">
-        <Image src={PenroseBottom} alt="penrose-bottom" fill />
-        <Image src={PenroseLeft} alt="penrose-left" fill />
-        <Image src={PenroseRight} alt="penrose-right" fill />
-        <div id="penrose-ball" />
+        <Image id="penrose-bottom" src={PenroseBottom} alt="penrose-bottom" fill />
+        <Image id="penrose-left" src={PenroseLeft} alt="penrose-left" fill />
+        <Image id="penrose-right" src={PenroseRight} alt="penrose-right" fill />
+        <div id="penrose-ball">
+          <div id="penrose-ball-inner" />
+        </div>
       </div>
     </div>
   )
