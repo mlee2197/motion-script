@@ -563,9 +563,12 @@ body {
     }
     
     #penrose-ball-inner {
+      --gradient-color-1: #cd7bb2;
+      --gradient-color-2: #7B4B94;
+      --gradient-speed: 1s;
       @apply relative w-full h-full rounded-full;
-      background-image: linear-gradient(90deg, #7D82B8, #7B4B94, #7D82B8, #7B4B94);
-      animation: penrose-ball-gradient-move 1s linear infinite reverse;
+      background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-1), var(--gradient-color-2));
+      animation: penrose-ball-gradient-move var(--gradient-speed) linear infinite reverse;
       background-size: 300% 200%;
       box-shadow: 0 0 10px 0 #7B4B94;
     }
