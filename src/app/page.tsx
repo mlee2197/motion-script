@@ -6,8 +6,9 @@ import {
   COMPONENT_CATEGORIES,
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
-import Penrose from "./animations/Penrose";
 
+const Penrose = dynamic(() => import("./animations/Penrose"));
+const TextHover = dynamic(() => import("./animations/TextHover"));
 const Pixel = dynamic(() => import("./animations/Pixel"), { ssr: false });
 const StarWars = dynamic(() => import("./animations/StarWars"));
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
@@ -35,6 +36,11 @@ export default function Home() {
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
           >
             <Penrose />
+          </Card>
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
+            <TextHover />
           </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
