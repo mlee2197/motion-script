@@ -8,6 +8,7 @@ import {
 } from "@/static/categories";
 
 const TextStroke = dynamic(() => import("./animations/TextStroke"), { ssr: false });
+const TextHover = dynamic(() => import("./animations/TextHover"));
 const Pixel = dynamic(() => import("./animations/Pixel"), { ssr: false });
 const StarWars = dynamic(() => import("./animations/StarWars"));
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
@@ -35,6 +36,11 @@ export default function Home() {
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
           >
             <TextStroke />
+          </Card>
+           <Card
+             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+            >
+            <TextHover />
           </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
