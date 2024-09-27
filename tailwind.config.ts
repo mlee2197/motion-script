@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "gray-750": "#2f3745",
+        "gray-800": "#232323",
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in-out",

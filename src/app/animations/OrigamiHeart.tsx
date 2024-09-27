@@ -131,9 +131,9 @@ const OrigamiHeart = () => {
     <div className="animation-container flex justify-center items-center">
       <PlayButton onClick={handleClick} />
       <div ref={ref} className="relative w-[150px] h-[150px] rotate-45">
-        <div className="t-fold absolute top-4 -left-6 -translate-x-[15px] w-24 h-5 bg-[#232323] -rotate-45 z-0"></div>
-        <div className="l-fold absolute bottom-4 -left-6 -translate-x-[15px] w-24 h-5 bg-[#232323] rotate-45 z-0"></div>
-        <div className="r-fold absolute top-4 -right-6 translate-x-[15px] w-24 h-5 bg-[#232323] rotate-45 z-0"></div>
+        <div className="t-fold absolute top-4 -left-6 -translate-x-[15px] w-24 h-5 bg-gray-800 -rotate-45 z-0"></div>
+        <div className="l-fold absolute bottom-4 -left-6 -translate-x-[15px] w-24 h-5 bg-gray-800 rotate-45 z-0"></div>
+        <div className="r-fold absolute top-4 -right-6 translate-x-[15px] w-24 h-5 bg-gray-800 rotate-45 z-0"></div>
 
         <div className="absolute top-0 left-0 w-[100px] h-[100px] bg-gradient-to-br from-transparent via-transparent via-[49.5%] to-[49.5%] to-red-200"></div>
         <div className="t-triangle absolute -top-1/2 -left-1/2 -translate-x-[13px] translate-y-[55px] border-[69px] border-transparent border-r-red-200 origin-right rotate-45"></div>
