@@ -137,6 +137,31 @@ body {
     }
   }
 
+  .rhombus-2 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+    background-color: red;
+  }
+  .pentagon-2 {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%, 0% 38%, 0% 38%, 0% 38%, 0% 38%);
+    background-color: orange;
+  }
+  .hexagon-2 {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%, 0% 25%, 0% 25%, 0% 25%);
+    background-color: purple;
+  }
+  .heptagon-2 {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%, 10% 20%, 10% 20%);
+    background-color: green;
+  }
+  .octagon-2 {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%, 0% 30%);
+    background-color: yellow;
+  }
+  .nonagon-2 {
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    background-color: blue;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -167,7 +192,15 @@ body {
     }
   }
 
+  @keyframes hue-rotate {
+    from {
+      filter: hue-rotate(0deg);
+    }
 
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 }
 
 @layer components {

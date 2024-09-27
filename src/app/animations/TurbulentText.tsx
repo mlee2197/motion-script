@@ -70,8 +70,10 @@ const TurbulentText = () => {
           ></feDisplacementMap>
         </filter>
         <text
-          y="57%"
-          x="15%"
+          y="50%"
+          x="50%"
+          textAnchor="middle"
+          dominantBaseline={"middle"}
           filter="url(#turbulent-text--filter)"
           fill="url(#turbulent-text--gradient)"
           fontSize={64}
