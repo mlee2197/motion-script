@@ -56,8 +56,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] sunset turbulence
 - [x] hue-rotate filter
 - [ ] blocky text with blobbing
-- [ ] conversion-friendly animations (text hover)
+- [x] conversion-friendly animations (text hover)
 - [ ] text blueprint/wireframe -> fill
 - [ ] text background animation
-- [ ] clip path animation
+- [x] clip path animation
 - [x] motion path
