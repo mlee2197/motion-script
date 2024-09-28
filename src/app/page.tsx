@@ -7,6 +7,7 @@ import {
   CSS_PROPERTY_CATEGORIES,
 } from "@/static/categories";
 
+const NightDay = dynamic(() => import("./animations/NightDay"));
 const Penrose = dynamic(() => import("./animations/Penrose"));
 const ShapeClip = dynamic(() => import("./animations/ShapeClip"), { ssr: false });
 const TextStroke = dynamic(() => import("./animations/TextStroke"), { ssr: false });
@@ -34,6 +35,11 @@ export default function Home() {
       <main>
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
+          <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+          >
+            <NightDay />
+          </Card>
           <Card
             tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
           >
