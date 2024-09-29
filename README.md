@@ -61,3 +61,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] text flicker
 - [ ] stagger random
 - [ ] keyboard typing
+
+==============
+### Page Updates
+- [ ] add a chevron down to hero
+- [ ] should I keep tags? (how to? tool?)
+- [ ] add a title
+- [ ] add descriptions
