@@ -137,6 +137,31 @@ body {
     }
   }
 
+  .rhombus-2 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+    background-color: red;
+  }
+  .pentagon-2 {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%, 0% 38%, 0% 38%, 0% 38%, 0% 38%);
+    background-color: orange;
+  }
+  .hexagon-2 {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%, 0% 25%, 0% 25%, 0% 25%);
+    background-color: purple;
+  }
+  .heptagon-2 {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%, 10% 20%, 10% 20%);
+    background-color: green;
+  }
+  .octagon-2 {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%, 0% 30%);
+    background-color: yellow;
+  }
+  .nonagon-2 {
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    background-color: blue;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -167,7 +192,15 @@ body {
     }
   }
 
+  @keyframes hue-rotate {
+    from {
+      filter: hue-rotate(0deg);
+    }
 
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 }
 
 @layer components {
@@ -471,4 +504,121 @@ body {
     text-align: justify;
   }
 
+  
+  @keyframes move {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+
+
+  @keyframes penrose-left-index {
+    0% {
+      z-index: 1;
+    }
+    17% {
+      z-index: 1;
+    }
+    18% {
+      z-index: 3;
+    } 
+    100% {
+      z-index: 3;
+    }
+  }
+
+  @keyframes penrose-right-index {
+    0% {
+      z-index: 3;
+    }
+
+    32.5% {
+      z-index: 3;
+    }
+    33% {
+      z-index: 1;
+    }
+    
+    49% {
+      z-index: 1;
+    }
+    50% {
+      z-index: 3;
+    }
+
+    90% {
+      z-index: 3;
+    }
+    100% {
+      z-index: 1;
+    }
+  }
+
+  @keyframes penrose-bottom-index {
+    0% {
+      z-index: 3;
+    }
+    67% {
+      z-index: 3;
+    }
+    68% {
+      z-index: 1;
+    } 
+    95% {
+      z-index: 3;
+    }
+    100% {
+      z-index: 3;
+    }
+  }
+
+  @keyframes penrose-ball-gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  #penrose {
+    --penrose-speed: 20s;
+
+
+    #penrose-ball {
+      @apply relative top-1/2 left-1/2 w-5 h-5;
+      offset-path: path("M-115,93 L-15,-72 L52,45 L-95,45 L0,-110 L95,58 L-54,58 L24,-83 L119,88 L-75,88 L-7,-30 L65,95 L-115,95 Z");
+      animation: move var(--penrose-speed) infinite linear;
+      z-index: 2;
+    }
+    
+    #penrose-ball-inner {
+      --gradient-color-1: #cd7bb2;
+      --gradient-color-2: #7B4B94;
+      --gradient-speed: 1s;
+      @apply relative w-full h-full rounded-full;
+      background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-1), var(--gradient-color-2));
+      animation: penrose-ball-gradient-move var(--gradient-speed) linear infinite reverse;
+      background-size: 300% 200%;
+      box-shadow: 0 0 10px 0 #7B4B94;
+    }
+
+    #penrose-bottom {
+      z-index: 1;
+      animation: penrose-bottom-index var(--penrose-speed) linear infinite;
+    }
+
+    #penrose-left {
+      z-index: 2;
+      animation: penrose-left-index var(--penrose-speed) linear infinite;
+    }
+    
+    #penrose-right {
+      z-index: 2;
+      animation: penrose-right-index var(--penrose-speed) linear infinite;
+    }
+  }
 }

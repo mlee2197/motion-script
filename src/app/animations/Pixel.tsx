@@ -24,9 +24,9 @@ const Pixel = () => {
       gsap.fromTo(morph, {
         attr: { radius: 1 }
       }, {
-        attr: { radius: 5 },
+        attr: { radius: 4 },
         repeat: -1,
-        duration: 5,
+        duration: 6,
         ease: "linear"
       })
     }, []);

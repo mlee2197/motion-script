@@ -47,15 +47,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - https://www.accordion.net.au/
 - https://css-tricks.com/animating-with-clip-path/
 - https://tympanus.net/codrops/2023/10/10/progressively-enhanced-webgl-lens-refraction/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_motion_path
 
 ## Planned Animations
 - [x] Blob
 - [x] Sound Wave
-- [ ] cool hover cursor
 - [x] sunset turbulence
-- [ ] hue-rotate filter
-- [ ] blocky text with blobbing
-- [ ] conversion-friendly animations (text hover)
-- [ ] text blueprint/wireframe -> fill
-- [ ] text background animation
-- [ ] clip path animation
+- [x] hue-rotate filter
+- [x] conversion-friendly animations (text hover)
+- [x] text blueprint/wireframe -> fill
+- [x] clip path animation
+- [x] motion path
+- [ ] text flicker
+- [ ] stagger random
+- [ ] keyboard typing
