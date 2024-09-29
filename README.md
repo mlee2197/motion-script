@@ -52,12 +52,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Planned Animations
 - [x] Blob
 - [x] Sound Wave
-- [ ] cool hover cursor
 - [x] sunset turbulence
 - [x] hue-rotate filter
-- [ ] blocky text with blobbing
 - [x] conversion-friendly animations (text hover)
 - [x] text blueprint/wireframe -> fill
-- [ ] text background animation
 - [x] clip path animation
 - [x] motion path
+- [ ] text flicker
+- [ ] stagger random
+- [ ] keyboard typing
