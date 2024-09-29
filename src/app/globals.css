@@ -621,4 +621,16 @@ body {
       animation: penrose-right-index var(--penrose-speed) linear infinite;
     }
   }
+
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(30%); }
+    10% { opacity: 1; transform: translateY(0%); }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .trail-letter {
+    animation: fade-up 2s ease-out;
+    pointer-events: none;
+  }
 }
