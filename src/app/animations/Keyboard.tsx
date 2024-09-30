@@ -6,7 +6,13 @@ import LeftArrow from "@/assets/keyboard/left-arrow.svg";
 import DownArrow from "@/assets/keyboard/down-arrow.svg";
 import Windows from "@/assets/keyboard/windows.svg";
 import Light from "@/assets/keyboard/lightbulb.svg";
-
+/*
+TODO
+- add pressing animation
+- add event listeners
+- add sounds
+- add back light gradient
+*/
 const Keyboard = () => {
   return (
     <div className="animation-container flex flex-col p-2">
