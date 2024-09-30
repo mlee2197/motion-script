@@ -5,11 +5,12 @@ interface CardProps {
   children: React.ReactNode;
   tags: TagT[];
   tool?: ToolT;
+  className?: string;
 }
 
-const Card = ({ children, tags, tool }: CardProps) => {
+const Card = ({ children, tags, tool, className }: CardProps) => {
   return (
-    <div>
+    <div className={className}>
       <div className="min-w-[248px] min-h-[248px] shadow-inner bg-white/5">
         {children}
       </div>
