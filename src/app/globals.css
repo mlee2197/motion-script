@@ -331,25 +331,46 @@ body {
     }
   }
 
-  @keyframes gradient-animated {
+  @keyframes gradient-rtl {
     0% {
       background-position: 0% 50%
     }
 
-    50% {
+    100% {
       background-position: 100% 50%
+    }
+  }
+  @keyframes gradient-ttb {
+    0% {
+      background-position: 50% 100%
     }
 
     100% {
-      background-position: 0% 50%
+      background-position: 50% 0%
     }
   }
-
-  #glowing-text {
-    text-shadow: 2px 2px 1px #fff;
-    background-image: linear-gradient(to right, #3fb194, #b1613f, #e6bb5e);
-    background-size: 200% 200%;
-    animation: gradient-animated 5s linear infinite;
+  @keyframes rainbow-shift {
+    0% {
+      background-color: #ff0000;
+    }
+    16.67% {
+      background-color: #ff7f00;
+    }
+    33.33% {
+      background-color: #ffff00;
+    }
+    50% {
+      background-color: #00ff00;
+    }
+    66.67% {
+      background-color: #0000ff;
+    }
+    83.33% {
+      background-color: #8b00ff;
+    }
+    100% {
+      background-color: #ff0000;
+    }
   }
 
   /* Animation 1 */
