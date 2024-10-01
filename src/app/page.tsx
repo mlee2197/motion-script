@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Tag from "@/components/Tag";
 
 import TextScramble from "./animations/TextScramble";
+import RippleEffect from "./animations/RippleEffect";
 const Keyboard = dynamic(() => import("./animations/Keyboard"), { ssr: false });
 const LetterTrail = dynamic(() => import("./animations/LetterTrail"), {
   ssr: false,
@@ -82,6 +83,19 @@ export default function Home() {
             }
           >
             <TextScramble />
+          </Card>
+          <Card
+            title="Ripple Effect"
+            description={
+              <p>
+                Explore the mesmerizing rainy day water ripple scene, crafted using <Tag bgColor={GSAP}>GSAP</Tag>'s bounce and stagger features.
+                <br />
+                <br />
+                <b>How to:</b> Click the play button to initiate the animation.
+              </p>
+            }
+          >
+            <RippleEffect />
           </Card>
           <Card
             title="Greetings"
