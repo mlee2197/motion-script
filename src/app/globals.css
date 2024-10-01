@@ -375,7 +375,7 @@ body {
 
   /* Animation 1 */
   #animation-bump {
-    @apply grid grid-cols-10;
+    @apply grid grid-cols-7;
 
     .box-container {
       @apply relative p-1 w-8 h-8 bg-transparent;
