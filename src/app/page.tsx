@@ -74,10 +74,10 @@ export default function Home() {
             title="Scrambled"
             description={
               <p>
-                Scramble animate any text you've written!
+                Scramble animate any text you&apos;ve written!
                 <br />
                 <br />
-                <b>How to:</b> typing in the provided text box and press "Scramble"
+                <b>How to:</b> typing in the provided text box and press &quot;Scramble&quot;
               </p>
             }
           >
