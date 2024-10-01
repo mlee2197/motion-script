@@ -88,7 +88,7 @@ export default function Home() {
             title="Ripple Effect"
             description={
               <p>
-                Explore the mesmerizing rainy day water ripple scene, crafted using <Tag bgColor={GSAP}>GSAP</Tag>'s bounce and stagger features.
+                Explore the mesmerizing rainy day water ripple scene, crafted using <Tag bgColor={GSAP}>GSAP&apos;s</Tag> bounce and stagger features.
                 <br />
                 <br />
                 <b>How to:</b> Click the play button to initiate the animation.
