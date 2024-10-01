@@ -52,6 +52,12 @@ export default function Home() {
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
           <Card
+            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+            className="md:col-span-2"
+          >
+            <Keyboard />
+          </Card>
+          <Card
             title="Mechanical"
             className="md:col-span-2"
             description={
