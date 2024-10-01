@@ -52,8 +52,16 @@ export default function Home() {
         <Hero />
         <div className="grid gap-6 px-4 py-8 md:grid-cols-2 md:px-[64px] lg:grid-cols-3">
           <Card
-            tags={[CSS_PROPERTY_CATEGORIES.hover, COMPONENT_CATEGORIES.svg]}
+            title="Mechanical"
             className="md:col-span-2"
+            description={
+              <p>
+                A mechanical keyboard that will copy your actual key presses.
+                This animation required the most{" "}
+                <Tag bgColor={JAVASCRIPT}>JavaScript</Tag> out of all the
+                animations.
+              </p>
+            }
           >
             <Keyboard />
           </Card>
