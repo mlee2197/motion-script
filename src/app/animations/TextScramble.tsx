@@ -23,7 +23,8 @@ const TextScramble = () => {
     return new Promise(resolve => setTimeout(resolve, 100));
   }
 
-  const scrambleTextMultiple = async () => {
+  const scrambleTextMultiple = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsAnimating(true);
     for (let i = 0; i < inputValue.length; i++) {
       await scrambleTextOnce(i);
@@ -32,7 +33,7 @@ const TextScramble = () => {
   };
 
   return (
-    <div className="animation-container flex flex-col items-center justify-center">
+    <form onSubmit={scrambleTextMultiple} className="animation-container flex flex-col items-center justify-center">
       <div className='relative bg-gray-750 text-2xl mx-auto overflow-hidden'>
         <input
           id="scramble-input"
@@ -40,6 +41,7 @@ const TextScramble = () => {
           maxLength={20}
           value={inputValue}
           onChange={handleInputChange}
+          autoComplete="off"
           className='block w-full border-0 p-4 bg-transparent tracking-wide'
         />
         {isAnimating && (
@@ -48,8 +50,8 @@ const TextScramble = () => {
           </div>
         )}
       </div>
-      <button onClick={scrambleTextMultiple} className="px-2 py-1 bg-gray-300 text-black rounded mt-6 active:bg-gray-400">Scramble</button>
-    </div>
+      <button type="submit" className="px-2 py-1 bg-gray-300 text-black rounded mt-6 active:bg-gray-400">Scramble</button>
+    </form>
   );
 };
 
