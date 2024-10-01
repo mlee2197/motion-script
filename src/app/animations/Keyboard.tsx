@@ -36,7 +36,7 @@ const KEYBOARD_BACKGROUND_STYLES = [
       "linear-gradient(to bottom, #6a11cb, #2575fc, #00b09b, #96c93d, #6a11cb, #2575fc, #00b09b, #96c93d)",
   },
   {
-    animation: "rainbow-shift 16s linear infinite",
+    animation: "rainbow-shift 10s linear infinite",
   },
 ];
 
