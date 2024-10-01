@@ -58,6 +58,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] text blueprint/wireframe -> fill
 - [x] clip path animation
 - [x] motion path
-- [ ] text flicker
+- [x] text flicker
 - [ ] stagger random
 - [x] keyboard typing
