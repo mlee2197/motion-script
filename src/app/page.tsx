@@ -66,20 +66,6 @@ export default function Home() {
             <Keyboard />
           </Card>
           <Card
-            title="Mechanical"
-            className="md:col-span-2"
-            description={
-              <p>
-                A mechanical keyboard that will copy your actual key presses.
-                This animation required the most{" "}
-                <Tag bgColor={JAVASCRIPT}>JavaScript</Tag> out of all the
-                animations.
-              </p>
-            }
-          >
-            <Keyboard />
-          </Card>
-          <Card
             title="Greetings"
             description={
               <p>

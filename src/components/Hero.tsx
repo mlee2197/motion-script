@@ -197,7 +197,7 @@ const Hero = () => {
         className="absolute w-[38ch] px-4 text-center bottom-[10%] left-1/2 -translate-x-1/2 text-gray-400 opacity-0 animate-fadeIn md:text-xl"
         style={{ animationDelay: "1000ms", animationFillMode: "forwards" }}
       >
-        30 Days, 30 Animations: A Daily Showcase of Web Animation Creativity
+        25 Days, 25 Animations: A Daily Showcase of Web Animation Creativity
         <span className="block mt-4 text-gray-500 md:hidden">
           Best experience on desktop
         </span>
