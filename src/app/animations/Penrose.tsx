@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import PenroseBottom from "@/assets/penrose-bottom.svg";
 import PenroseLeft from "@/assets/penrose-left.svg";
