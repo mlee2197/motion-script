@@ -252,7 +252,7 @@ body {
   }
 
   .tag {
-    @apply inline-block w-max -skew-x-[20deg] rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-lg px-2 py-1 mx-1 text-xs [&_div]:skew-x-[20deg] text-white bg-black;
+    @apply inline-block w-max -skew-x-[20deg] rounded-tl-md rounded-tr-lg rounded-br-md rounded-bl-lg px-2 py-[2px] mx-1 [&_div]:skew-x-[20deg] font-bold text-white bg-black;
   }
 
   /* Animation 1 */

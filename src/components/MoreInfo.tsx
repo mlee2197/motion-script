@@ -22,8 +22,8 @@ const MoreInfo: React.FC<MoreInfoProps> = ({ children }) => {
         i
       </button>
       {isOpen && (
-        <div className="absolute inset-0 mb-8 bg-black bg-opacity-80 flex items-center justify-center p-8 z-10">
-          <div className="relative w-full h-full overflow-auto text-white">
+        <div className="absolute inset-0 mb-8 bg-black bg-opacity-80 flex items-center justify-center p-4 z-10 lg:p-8">
+          <div className="relative w-full h-full overflow-auto text-white text-sm md:text-md">
             {children}
             <button
               className="absolute top-0 right-0 text-white hover:text-gray-300"
