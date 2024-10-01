@@ -79,7 +79,7 @@ const Key = ({ keyData, width, color, onClick, isMute }: KeyProps) => {
       <div
       onClick={onClick ? onClick : undefined}
       className={
-          "flex flex-col items-center justify-center h-full w-full rounded-sm text-black font-bold " +
+          "flex flex-col items-center justify-center h-full w-full rounded-sm text-black font-bold select-none" +
           "before:h-full before:w-full before:absolute before:top-0 before:left-0 before:rounded-sm before:z-[-1] before:transition-transform before:duration-200 before:transform before:scale-95 before:translate-x-[-1px] before:translate-y-[-1px] before:shadow-md"
         }
         style={{
