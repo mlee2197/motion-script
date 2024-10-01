@@ -52,8 +52,10 @@ const LetterTrail = () => {
   }, [mouseX, mouseY, sentenceIndex, letterIndex, lastLetterPosition]);
 
   return (
-    <div ref={ref} className="animation-container ">
-
+    <div ref={ref} className="animation-container flex items-center justify-center">
+      <div className="max-w-[10ch] font-shrikhand text-center text-4xl opacity-10">
+        Move your mouse here
+      </div>
     </div>
   )
 }

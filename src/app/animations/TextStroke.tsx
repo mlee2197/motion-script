@@ -47,7 +47,7 @@ const TextStroke = () => {
           strokeDasharray={"300 0 0"}
           strokeDashoffset={300}
         >
-          Tax Fraud
+          Tax Evasion
         </text>
       </svg>
     </div>
