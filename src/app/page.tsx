@@ -3,6 +3,7 @@ import Card from "@/components/Card";
 import Hero from "../components/Hero";
 import Tag from "@/components/Tag";
 
+import TextScramble from "./animations/TextScramble";
 const Keyboard = dynamic(() => import("./animations/Keyboard"), { ssr: false });
 const LetterTrail = dynamic(() => import("./animations/LetterTrail"), {
   ssr: false,
@@ -68,6 +69,19 @@ export default function Home() {
             }
           >
             <Keyboard />
+          </Card>
+          <Card
+            title="Scrambled"
+            description={
+              <p>
+                Scramble animate any text you've written!
+                <br />
+                <br />
+                <b>How to:</b> typing in the provided text box and press "Scramble"
+              </p>
+            }
+          >
+            <TextScramble />
           </Card>
           <Card
             title="Greetings"
