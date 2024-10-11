@@ -34,8 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        {/* SVG favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
         {/* <!-- PNG versions --> */}
@@ -50,6 +49,12 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
           href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-48x48.png"
         />
         <link
           rel="icon"
@@ -85,6 +90,9 @@ export default function RootLayout({
 
         {/* <!-- Safari pinned tab icon --> */}
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+
+        {/* Manifest */}
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${montserrat.variable} ${montserratAlternates.variable} ${shrikhand.variable} antialiased`}
