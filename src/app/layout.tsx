@@ -35,6 +35,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* SVG favicon */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
         {/* <!-- PNG versions --> */}
         <link
