@@ -39,6 +39,7 @@ const TextScramble = () => {
           id="scramble-input"
           type="text"
           maxLength={20}
+          placeholder="Type something..."
           value={inputValue}
           onChange={handleInputChange}
           autoComplete="off"
